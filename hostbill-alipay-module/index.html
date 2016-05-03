@@ -1,0 +1,571 @@
+<!doctype html>
+<html class="theme-next  theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+
+
+  <meta name="keywords" content="- HostBill
+- 支付宝," />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Aveline's Blog" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-20336289-2'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> HostBill 支付宝模块 // Aveline's Blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Aveline's Blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'h7fLV84amzbZPuPcVWP6','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              HostBill 支付宝模块
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2014-04-07
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/hostbill-alipay-module/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="hostbill-alipay-module/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <p>最近一阵子在搭建某 IDC 的客户与支持系统，由于 WHMCS 烂泥扶不上墙，所以我就选用了高大上的 HostBill。<br>（几乎免费的和一次性要付 999 刀的东西能比嘛</p>
+<p>啊，当然呢，HostBill 也有很多不好的地方吖，比如这个自带的支付宝模块，就死活用不了，支付是没问题，但是回调啊总是 Failure。</p>
+<p>找客服呢自然是没用的，为什么呢？我买了已经超过 30 天了，人家要额外收钱了而且还不一定能解决。</p>
+<p>那只能自己来咯，首先付掉 2.50 EUR 在 <a href="http://easytoyou.eu" target="_blank" rel="external">http://easytoyou.eu</a> 买个一天的 ionCube Decoder。</p>
+<p>然后解密以下文件：</p>
+<ul>
+<li>/includes/modules/Payment/class.alipay.php</li>
+<li>/includes/modules/Payment/callback/alipay_return.php</li>
+<li>/includes/modules/Payment/callback/alipay_callback.php</li>
+</ul>
+<p>解密之后我发现调用模块居然是这样做的：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'cmd'</span>] = <span class="string">'callback'</span>;</span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'module'</span>] = <span class="string">'alipay'</span>;</span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'ali_type_r'</span>] = <span class="string">'callbak'</span>;</span><br><span class="line">error_reporting( <span class="number">0</span> );</span><br><span class="line">session_name( <span class="string">'SESSID'</span> . substr( md5( <span class="variable">$_SERVER</span>[<span class="string">'SERVER_NAME'</span>] ), -<span class="number">4</span> ) );</span><br><span class="line">session_start(  );</span><br><span class="line"><span class="keyword">include</span>( <span class="string">'../../../../hbf/bootstrap.php'</span> );</span><br><span class="line">FrontController::init( <span class="string">'module'</span> );</span><br></pre></td></tr></table></figure></p>
+<p><strong>你！能！想！象！调！用！模！块！居！然！用！$_GET！来！传！参！数！吗！</strong><br><strong>反！正！我！不！能！</strong></p>
+<p>好吧其实出错的原因呢和这儿关系不是很大，当然这么写肯定是不守<del>妇道</del>的！</p>
+<p>这里用的是 <code>$_GET[&#39;ali_type_r&#39;]</code>，但是在 <strong>class.alipay.php</strong> 里面却检查的是 <code>$_REQUEST[&#39;ali_type_r&#39;]</code>，尼这是自己山寨的 <code>$_GET</code> 内容当然不会出现在 <code>$_REQUEST</code> 里啦！baka！</p>
+<p>然后这里特么的你写的是 <code>callbak</code> 啊！睁大眼睛看看是不是少了一个 <code>c</code>！</p>
+<p>另外就是支付宝 return 的验证接口需要把 <code>$_GET</code> 里的所有内容做一个 chksum，然后，嗯，我想是个人都能想清楚了：<br><code>$_GET[&#39;cmd&#39;]</code>、<code>$_GET[&#39;module&#39;]</code> 和 <code>$_GET[&#39;ali_type_r&#39;]</code> 混进来之后 chksum 肯定会不一样的啦~</p>
+<p>既然问题都知道了，那么就好解决了。</p>
+<p>不过呢，作为蛋疼党，窝比较喜欢重写而不是修 Bug … 加起来连 500 行都不到嘛！（撸袖子</p>
+<p>以及自带的模块用的还是老版本的支付宝接口，窝参考支付宝官方的 PHP 栗子更新了下。</p>
+<p>嗯，以下是窝重写之后的代码，已经扔在 GitHub 上了喵~<br><a href="https://github.com/ym/alipay-hostbill" target="_blank" rel="external">https://github.com/ym/alipay-hostbill</a></p>
+<p>下载之后扔在 <strong>includes/modules/Payment</strong> 目录覆盖原有文件即可。<br>我在 PHP 5.5 下测试过是木有问题的，其他版本有问题可能性也不大，因为这次比较收敛，没有怎么用新特性。<br>如果有问题的话，欢迎在 <a href="https://github.com/ym/alipay-hostbill/issues" target="_blank" rel="external">GitHub</a> 上给我发 Bug 报告或者 Pull Request~</p>
+<p>啊最后感谢师姑陪我写代码还送我蛋糕次以及顺便吐槽下支付宝你的 PHP 栗子是临时工写的吗，<code>veryfy</code>、<code>isSgin</code> 这些是个什么玩意儿啊？！<br>再顺便吐槽下 <a href="https://plus.google.com/110748073762130717665/about" target="_blank" rel="external">1901 咖啡馆</a> 你家为什么没有一个能让我吃 / 喝的下去的玩意儿以及为何 Wi-Fi 如此之烂以至于我在四月份的第一天就用掉了 900 M 的 3G 流量，太讨厌了！！！<br>发这篇文章到 Twitter 的时候我又发现了一个槽点啊哈哈，Logdown 的 slug 生成居然把 <strong>支付宝</strong> 给翻译成了 <strong>PayPal</strong>，给跪了！</p>
+<p>哦，对了，刚才的蛋糕忘记上图了：</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/192835/VMDO0MOuQMen3dMlhoAD_IMG_1006.JPG" alt="IMG_1006.JPG"></p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HostBill-支付宝/"> #- HostBill
+- 支付宝 </a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/hostbill-alipay-14/">HostBill 支付宝模块更新</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/remove-annoying-taobao-bootimg/">去除讨厌的手机淘宝启动图</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="https://en.gravatar.com/userimage/15516490/ccf4829ea2de640a573974d1e17698ee.png?size=360" alt="Aveline Swan" />
+          <p class="site-author-name">Aveline Swan</p>
+        </div>
+        <p class="site-description motion-element"></p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/ym" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/Aveline_Swan" target="_blank">Twitter</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.douban.com/people/avelineswan/" target="_blank">DouBan</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目錄</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2005 - 
+  2016
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Aveline Swan</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.3" id="motion.fallback"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'hostbill-alipay-module/';
+      var disqus_title = 'HostBill 支付宝模块';
+      var disqus_url = 'https://blog.swan.im/hostbill-alipay-module/';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

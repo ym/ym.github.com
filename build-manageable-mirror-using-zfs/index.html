@@ -1,0 +1,569 @@
+<!doctype html>
+<html class="theme-next  theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Aveline's Blog" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-20336289-2'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> 使用 ZFS 构建易管理的镜像服务器 // Aveline's Blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Aveline's Blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'h7fLV84amzbZPuPcVWP6','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              使用 ZFS 构建易管理的镜像服务器
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2014-08-28
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/build-manageable-mirror-using-zfs/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="build-manageable-mirror-using-zfs/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <p>我们在某机房托管了很多服务器，更新和初次安装时经常会占用大量下行带宽（虽然下行是不收钱的），也拖慢了部署机器的速度，于是我在机房里搭建了一个镜像服务器。</p>
+<p>一开始我使用的是 XFS 作为文件系统，在 rsync 列目录和 du 统计文件大小时经常挂住，系统 load 常常能到 60，在某天 … 硬盘终于挂了</p>
+<p>于是经由朋友诱惑换到了 ZFS，再也无需担心 load 的问题了 … 抹泪啊真是</p>
+<h2 id="那么，ZFS_有啥好的？">那么，ZFS 有啥好的？</h2><p>首先镜像服务不只是镜像一个发行版，由于历史遗留原因，我们同时在用的发行版有 Red Hat、CentOS、Debian、Ubuntu。</p>
+<p>而各种发行版的同步方式并不都是 rsync，如果都是 rsync 的话，加个 <code>--report</code> 参数就能知道每次变更的大小了。那我之前是怎么做的呢？</p>
+<p>先 <code>du -sh ./</code> 记录一遍，然后再 <code>du -sh ./</code> 记录一遍，算差值。<code>du</code> 扫目录的时候经常 load 会很高，主要都在等 IO 了。</p>
+<p>而换到 ZFS 之后，每个镜像项目是一个单独的 volume，我只需要记录卷占用的变化就可以了，还用扫什么目录啊！</p>
+<p>好话说完了那么：</p>
+<h2 id="ZFS_有啥不好的呢">ZFS 有啥不好的呢</h2><p>ZFS 需要大量的系统资源，另外对 32 位系统的支持不是很好。<br>当然这都不算问题啦，内存也不贵多买几条就是了然后现在还有人在服务器上用 32 位系统嘛（</p>
+<p>下面来讲讲怎么用 …</p>
+<h2 id="安装_ZFS_on_Linux">安装 ZFS on Linux</h2><p>以下例子中系统环境为 <code>Debian GNU/Linux 7.6 (wheezy) x86_64</code> </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//archive.zfsonlinux.org/debian/pool/main/z/zfsonlinux/zfsonlinux_2%7Ewheezy_all.deb</span></span><br><span class="line">sudo dpkg -<span class="tag">i</span> zfsonlinux_2~wheezy_all<span class="class">.deb</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install debian-zfs</span><br></pre></td></tr></table></figure>
+<p>需要注意的是安装时会编译内核模块，会比较慢，耐心等待就好。</p>
+<h2 id="创建存储池">创建存储池</h2><p>官方文档里推荐是使用 <code>/dev/disk/by-id/</code> 里的名称来创建存储池，用 <code>/dev/sd*</code> 可能偶尔会导致一些导入错误。</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zpool create -o ashift=12 mpool /dev/disk/by-id/scsi-<span class="number">14d534654202</span><span class="number">020207a348</span>b11c863ea<span class="number">4a9099563</span>cb847fbcf</span><br></pre></td></tr></table></figure>
+<p>创建完成后可以用 <code>zpool list</code> 命令来检查是否已经成功创建：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">NAME</span>    <span class="tag">SIZE</span>  <span class="tag">ALLOC</span>   <span class="tag">FREE</span>    <span class="tag">CAP</span>  <span class="tag">DEDUP</span>  <span class="tag">HEALTH</span>  <span class="tag">ALTROOT</span></span><br><span class="line"><span class="tag">mpool</span>  1<span class="class">.81T</span>  1<span class="class">.72T</span>  95<span class="class">.7G</span>    94%  1<span class="class">.00x</span>  <span class="tag">ONLINE</span>  <span class="tag">-</span></span><br></pre></td></tr></table></figure>
+<h2 id="管理镜像项目">管理镜像项目</h2><p>首先为这个镜像创建一个 volume：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zfs <span class="built_in">create</span> mpool/puppetlabs-apt</span><br></pre></td></tr></table></figure>
+<p>然后进行初次同步</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">cd</span> <span class="comment">/mpool/puppetlabs</span><span class="literal">-</span><span class="comment">apt</span></span><br><span class="line"><span class="comment">rsync</span> <span class="literal">-</span><span class="comment">aHvh</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span><span class="literal">-</span><span class="comment">delay</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">owner</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">group</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">stats</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">safe</span><span class="literal">-</span><span class="comment">links</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">timeout=120</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">contimeout=120</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delay</span><span class="literal">-</span><span class="comment">updates</span> <span class="literal">-</span><span class="comment">4</span> <span class="comment">rsync://apt</span><span class="string">.</span><span class="comment">puppetlabs</span><span class="string">.</span><span class="comment">com/packages/apt/</span> <span class="comment">/data/mirror/storage/puppet</span><span class="literal">-</span><span class="comment">deb</span></span><br></pre></td></tr></table></figure>
+<p>这就完了？当然没有。</p>
+<p>是不是在 <code>apt-get update</code> 的时候遇到过以下的提示？</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/source/Sources  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/source/Sources  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/binary-amd64/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/binary-amd64/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/binary-i386/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="groovy"><span class="string">W:</span> Failed to fetch <span class="string">http:</span><span class="comment">//mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/binary-i386/Packages  404  Not Found</span></span></span></span></span></span></span><br></pre></td></tr></table></figure>
+<p>嗯，有了 ZFS，这种现象就不会有啦~</p>
+<p>在增量同步前先对当前本地镜像做一次 snapshot：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zfs <span class="keyword">snapshot</span> mpool/puppetlabs-apt<span class="variable">@20140829</span></span><br></pre></td></tr></table></figure>
+<p>然后挂载到一个新目录，再将 nginx 里的路径指向这个新目录：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t zfs mpool<span class="regexp">/puppetlabs-apt@20140829 /</span>var<span class="regexp">/www/mi</span>rror<span class="regexp">/puppetlabs-apt/</span><span class="number">20140829</span></span><br></pre></td></tr></table></figure></p>
+<p>同步完成后，再将 nginx 里的路径指向原来的目录即可。是不是很方便呐~</p>
+<p>— EOF —</p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/analysis-of-juhe-data-who-steal-user-contacts-book/">关于聚合数据窃取用户通讯录的完整分析</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/fuck-solusvm-again/">修复 SolusVM 添加 IP 之后无法使用的 Bug</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </div>
+  </div>
+
+
+
+    
+
+    
+      <div class="comments" id="comments">
+        
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        
+      </div>
+    
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="https://en.gravatar.com/userimage/15516490/ccf4829ea2de640a573974d1e17698ee.png?size=360" alt="Aveline Swan" />
+          <p class="site-author-name">Aveline Swan</p>
+        </div>
+        <p class="site-description motion-element"></p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/ym" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/Aveline_Swan" target="_blank">Twitter</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.douban.com/people/avelineswan/" target="_blank">DouBan</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+
+      </div>
+
+      
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#那么，ZFS_有啥好的？"><span class="nav-number">1.</span> <span class="nav-text">那么，ZFS 有啥好的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ZFS_有啥不好的呢"><span class="nav-number">2.</span> <span class="nav-text">ZFS 有啥不好的呢</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装_ZFS_on_Linux"><span class="nav-number">3.</span> <span class="nav-text">安装 ZFS on Linux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建存储池"><span class="nav-number">4.</span> <span class="nav-text">创建存储池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#管理镜像项目"><span class="nav-number">5.</span> <span class="nav-text">管理镜像项目</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2005 - 
+  2016
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Aveline Swan</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.3" id="motion.fallback"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'build-manageable-mirror-using-zfs/';
+      var disqus_title = '使用 ZFS 构建易管理的镜像服务器';
+      var disqus_url = 'https://blog.swan.im/build-manageable-mirror-using-zfs/';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

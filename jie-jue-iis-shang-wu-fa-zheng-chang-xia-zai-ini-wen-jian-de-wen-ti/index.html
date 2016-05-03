@@ -20,7 +20,9 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="- Servers
+- Technology
+- IIS," />
 
 
 
@@ -45,7 +47,7 @@
 
 
 
-  <title> 歸檔 // Aveline's Blog </title>
+  <title> 解决 IIS 上无法正常下载 ini 文件的问题 // Aveline's Blog </title>
 </head>
 
 <body>
@@ -59,7 +61,7 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column  page-archive ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -146,115 +148,97 @@
         <div id="content" class="content">
           
 
-  <div id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 目前共計 33 篇文章。 繼續努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
       
+      
+        <h1 class="post-title">
+          
+          
+            
+              解决 IIS 上无法正常下载 ini 文件的问题
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2012-10-05
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
       
 
       
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
+        <p>解决方法很简单:</p>
+<p>1. 打开 <strong>Internet 信息服务(IIS) 管理器</strong></p>
+<p>2. 右击 <strong>网站</strong> ，点击 <strong>属性</strong></p>
+<p>3. 切换到 <strong>HTTP 头</strong> 选项卡</p>
+<p>4. 点击 <strong>MIME 类型</strong> 按钮</p>
+<p>5. 点击 <strong>新建</strong>，</p>
+<p>扩展名为 <strong>.ini</strong></p>
+<p>MIME类型为 <strong>application/octet-stream</strong></p>
+<p>6. 一路确定&#8230;搞定</p>
+<p>IIS 下面文件打不开大多数情况下无怪乎以下两种情况：</p>
+<ol>
+<li>MINE 类型设置不正确</li>
+<li>文件权限设置不正确</li>
+</ol>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Servers-Technology-IIS/"> #- Servers
+- Technology
+- IIS </a>
+          
         </div>
       
-      
 
       
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/zai-nodejs-shang-jie-xi-pydict/">'在 NodeJS 上解析 PyDict'</a>
+            
+          </div>
 
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/build-anycast-network-using-low-cost-vm/">
-              使用 BIRD 和 ExaBGP 低成本自建 AnyCast 网络
-            </a>
-        
-      </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 10-11 </span>
-      </div>
-
-    </div>
-  </div>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/workaround-of-docker-cap-set-file/">
-              Docker cpio: 'cap_set_file' 的临时解决方法
-            </a>
-        
-      </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 07-07 </span>
-      </div>
-
-    </div>
-  </div>
-
-
-
-    
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mongodb-xian-shang-qian-yi-jiao-cheng/">MongoDB 线上迁移教程</a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/analysis-of-juhe-data-who-steal-user-contacts-book/">
-              关于聚合数据窃取用户通讯录的完整分析
-            </a>
-        
-      </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 11-04 </span>
-      </div>
-
+      
     </div>
   </div>
 
@@ -262,13 +246,16 @@
 
     
 
+    
+      <div class="comments" id="comments">
+        
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        
+      </div>
+    
   </div>
-
-  
-  <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/11/">11</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
-  </div>
-
 
 
         </div>
@@ -290,6 +277,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -355,6 +351,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目錄</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -397,8 +404,6 @@
 
   
   
-  
-
 
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
@@ -416,6 +421,98 @@
 
   
   
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+
 
 
   <script type="text/javascript">
@@ -429,6 +526,33 @@
   
 
   
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/';
+      var disqus_title = '解决 IIS 上无法正常下载 ini 文件的问题';
+      var disqus_url = 'https://blog.swan.im/jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
 
   
   

@@ -1,0 +1,591 @@
+<!doctype html>
+<html class="theme-next  theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Aveline's Blog" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-20336289-2'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Aveline's Blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Aveline's Blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'h7fLV84amzbZPuPcVWP6','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <div id="posts" class="posts-expand">
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/docker-deployment-notes/">
+                Docker 简明部署教程
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2014-02-07
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/docker-deployment-notes/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="docker-deployment-notes/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>喵，首先需要准备一个干净的 Ubuntu 12.04 LTS 环境。<br>Tips: 如果使用 VPS 的话推荐使用基于 KVM / VMWare 虚拟化的，如果是 OpenVZ 什么的就算了… 洗洗睡吧</p>
+<h2 id="安装_Docker">安装 Docker</h2><p>首先需要升级内核，由于 Precise 默认提供的 3.2 内核里 LXC 的支持有点问题，所以我们需要升级到 3.8：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y linux-image-generic-lts-raring linux-headers-generic-lts-raring</span><br></pre></td></tr></table></figure></p>
+<p>升级完成后重启一下，让内核生效：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></p>
+<p>然后导入 Docker 的 Key 并安装之：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="number">36</span>A1D7869245C8950F966E92D8576A8BA88D21E9</span><br><span class="line">sudo sh -c <span class="string">"echo deb http://get.docker.io/ubuntu docker main\</span><br><span class="line">&gt; /etc/apt/sources.list.d/docker.list"</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y lxc-docker</span><br></pre></td></tr></table></figure></p>
+<h2 id="准备基础镜像">准备基础镜像</h2><p>接下来我们需要准备一个基础镜像，对于我等 Debian 脑残粉，嗯下面的基础镜像就以 Debian 7 Wheezy 为例子啦～</p>
+<p>当然，你也可以直接用 <code>docker pull debian</code> 从官方 registry 下载，但是 Cloudflare 在国内的可用性实在是太烂了，还是自己做算了。</p>
+<p>制作镜像需要用到 <code>debootstrap</code> 这个包，我们先安装一下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y debootstrap</span><br></pre></td></tr></table></figure></p>
+<p>然后生成一只 Debian：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">debootstrap wheezy debian-wheezy http://mirrors.espresso.li/debian</span><br></pre></td></tr></table></figure></p>
+<p>嗯注意请把 <code>http://mirrors.espresso.li/debian</code> 换成你所使用的 Debian 源的地址，上面写的这个源是不对外开放的喵</p>
+<p>接下来我们把它导入 Docker：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -C debian-wheezy -c . | sudo docker import - espresso/debian</span><br></pre></td></tr></table></figure></p>
+<p>嗯好了接下来你们自己玩儿吧我上班去了。。。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/jie-jue-edgerouter-shuang-wan-shi-mou-chu-kou-wu-fa-zheng-chang-nat-de-wen-ti/">
+                解決 EdgeRouter 雙 WAN 時某一出口無法正常 NAT 的問題
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-12-13
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/jie-jue-edgerouter-shuang-wan-shi-mou-chu-kou-wu-fa-zheng-chang-nat-de-wen-ti/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jie-jue-edgerouter-shuang-wan-shi-mou-chu-kou-wu-fa-zheng-chang-nat-de-wen-ti/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>前幾天在路由器上跑 mtr 把 ssh 跑死了，由於沒接 Console 的線我也不知道為什麼所以乾脆重啟了一下。</p>
+<p>然後，我聯通出口的 NAT 掛掉了。 :-(</p>
+<p>我的網絡架構是這樣子的：</p>
+<blockquote>
+<p>接入層 EdgeRouter Lite：</p>
+<ul>
+<li>eth0 接入到室內交換機</li>
+<li>eth1 上聯公用 TP-LINK 路由器，使用 DHCP 接入長城寬帶</li>
+<li>eth2 上聯聯通 EPON 終端設備，通過 PPPoE 接入聯通寬帶</li>
+</ul>
+</blockquote>
+<p>重啟之後由於 eth1 的 DHCP 先獲取到了 IP 地址，系統的默認路由就變成了 eth1。</p>
+<p>於是後來 eth2 上連接的 PPPoE 連接完成後沒有修改默認路由，NAT 自然不知道把數據往哪裡扔了，所以… 解決辦法很簡單咯：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ip route replace default via pppoe0</span><br></pre></td></tr></table></figure></p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/use-exim4-to/">
+                搭建 Exim4 來去除 Google Apps 發送郵件時提示以某某的身份發送的問題
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2013-11-26
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/use-exim4-to/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="use-exim4-to/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>之前為了防止各個服務商沒事兒洩漏我 E-mail 地址，我每次註冊服務時填寫的註冊郵箱地址都是 <strong>provider-name@xswan.net</strong> 這種形式的，本來這樣沒什麼問題，但是 … 要回覆的時候問題就來了。</p>
+<p>首先我們把這個郵箱添加到 <strong>Send mail as</strong> 裡去，然後 … 嗯發郵件的時候，就會出現這樣討厭的提示了：</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/162913/BpNfnWLS0ei6sZypM6sx_06$TKM1B6LFD8R2O~_NXFYY.jpg" alt="06$TKM1B6LFD8R2O~_NXFYY.jpg"></p>
+<p>在 Google Apps 的後臺找了半天也沒發現能重寫 Envelope-From 這個頭的地方，那就搭建一個 Exim4 好啦～</p>
+<p>這裡我使用的是 <a href="https://www.digitalocean.com/?refcode=6034af1bc1c8" target="_blank" rel="external">DigitalOcean</a> 的 VPS 來搭建 Exim4，主要原因是：</p>
+<ol>
+<li>可以設置 PTR，郵件服務器不做反向解析的話到達率可是很低的喲</li>
+<li>性價比高，5 USD 還 SSD 你到哪兒找去（LowEndBox 什麼的地方除外）</li>
+</ol>
+<p>操作系統我使用的是 Debian 7 x64，安裝步驟如下：</p>
+<p><strong>1.</strong> 安裝 Exim4<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get -y upgrade</span><br><span class="line">apt-get -y install mailutils exim4-daemon-light</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.</strong> 配置 Exim4<br>把以下內容覆蓋到 <code>/etc/exim4/update-exim4.conf.conf</code> 然後運行 <code>dpkg-reconfigure exim4</code> 一路 Next 即可：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">dc_eximconfig_configtype=<span class="value">'internet'</span></span></span><br><span class="line"><span class="setting">dc_other_hostnames=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_local_interfaces=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_readhost=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_relay_domains=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_minimaldns=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_relay_nets=<span class="value">'<span class="number">216.239</span>.<span class="number">32.0</span>/<span class="number">19</span>;<span class="number">64.233</span>.<span class="number">160.0</span>/<span class="number">19</span>;<span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span>;<span class="number">72.14</span>.<span class="number">192.0</span>/<span class="number">18</span>;<span class="number">209.85</span>.<span class="number">128.0</span>/<span class="number">17</span>;<span class="number">66.102</span>.<span class="number">0.0</span>/<span class="number">20</span>;<span class="number">74.125</span>.<span class="number">0.0</span>/<span class="number">16</span>;<span class="number">64.18</span>.<span class="number">0.0</span>/<span class="number">20</span>;<span class="number">207.126</span>.<span class="number">144.0</span>/<span class="number">20</span>;<span class="number">173.194</span>.<span class="number">0.0</span>/<span class="number">16</span>'</span></span></span><br><span class="line"><span class="setting">dc_smarthost=<span class="value">''</span></span></span><br><span class="line"><span class="setting">CFILEMODE=<span class="value">'<span class="number">644</span>'</span></span></span><br><span class="line"><span class="setting">dc_use_split_config=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_hide_mailname=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_mailname_in_oh=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_localdelivery=<span class="value">'mail_spool'</span></span></span><br></pre></td></tr></table></figure></p>
+<p>上面的 <strong>dc_relay_nets</strong> 裡是 Google 的 IP 段，獲取方法在 <a href="https://support.google.com/a/answer/60764?hl=en" target="_blank" rel="external">這裡</a>。</p>
+<p><strong>3.</strong> 配置 Exim4 重寫規則<br>將以下內容寫入 <code>/etc/exim4/conf.d/rewrite/32\_exim4-rewrite-envelope-from</code>：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a@loli<span class="class">.vg</span> <span class="variable">$h_from</span> F</span><br></pre></td></tr></table></figure></p>
+<p><code>a@loli.vg</code> 是我的郵箱地址，實際操作中請按換成自己的嗯。。</p>
+<p>修改完成後重啟 exim4:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">invoke-rc.d exim4 restart</span><br></pre></td></tr></table></figure></p>
+<p><strong>4.</strong> 安全加固<br>其實就是用 iptables 把來自非 Google 的 IP 屏蔽掉而已，雖然第二步的 <strong>dc_relay_nets</strong> 已經處理了，但是我覺得拒絕投遞的日誌出現也很煩，那就在 iptables 裡再屏蔽一次好了 :-)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">216.239</span>.<span class="number">32.0</span>/<span class="number">19</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">64.233</span>.<span class="number">160.0</span>/<span class="number">19</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">72.14</span>.<span class="number">192.0</span>/<span class="number">18</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">209.85</span>.<span class="number">128.0</span>/<span class="number">17</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.102</span>.<span class="number">0.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">74.125</span>.<span class="number">0.0</span>/<span class="number">16</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">207.126</span>.<span class="number">144.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">173.194</span>.<span class="number">0.0</span>/<span class="number">16</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp -m tcp --dport <span class="number">25</span> -j DROP</span><br></pre></td></tr></table></figure></p>
+<p><strong>5.</strong> 修改域名 A 記錄和 SPF 記錄<br>首先添加一條 <strong>_spf.moease.org</strong>，記錄類型為 SPF（沒有 SPF 的選 TXT)：<br><code>&quot;v=spf1 a:mx1.moease.org ip4:198.211.101.101 ?all&quot;</code></p>
+<p>這裡的 <strong>mx1.moease.org</strong> 就是我運行 Exim4 的機器的 Hostname，<em>198.211.101.101</em> 是它的 IP 地址。</p>
+<p>然後將 <strong>moease.org</strong> 的 SPF 記錄修改為：<br><code>&quot;v=spf1 include:_spf.moease.org include:_spf.google.com -all&quot;</code></p>
+<p>關於 SPF 記錄的更多知識可以在<a href="https://wzyboy.im/post/865.html" target="_blank" rel="external">小允的 Blog</a> 裡找到，這裡就不再敘述了。</p>
+<p><strong>6.</strong> 修改 Google Apps 郵件發送設置<br>打開 Google Apps 控制面板，依次打開：<br>Google Apps &gt; Gmail &gt; Advanced Settings</p>
+<p>在打開的頁面裡找到 Outbound gateway，填上郵件服務器的地址保存即可，我這裡填寫的是 <code>mx1.moease.org</code>。<br>（沒有的請先升級到付費版本）</p>
+<p>好啦，完結撒花～</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+  </div>
+
+  
+  <div class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/6/">&raquo;</a>
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="https://en.gravatar.com/userimage/15516490/ccf4829ea2de640a573974d1e17698ee.png?size=360" alt="Aveline Swan" />
+          <p class="site-author-name">Aveline Swan</p>
+        </div>
+        <p class="site-description motion-element"></p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/ym" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/Aveline_Swan" target="_blank">Twitter</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.douban.com/people/avelineswan/" target="_blank">DouBan</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2005 - 
+  2016
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Aveline Swan</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.3" id="motion.fallback"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'page/5/index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>

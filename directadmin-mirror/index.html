@@ -45,7 +45,7 @@
 
 
 
-  <title> 歸檔 // Aveline's Blog </title>
+  <title> DirectAdmin 镜像 // Aveline's Blog </title>
 </head>
 
 <body>
@@ -59,7 +59,7 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column  page-archive ">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -146,48 +146,83 @@
         <div id="content" class="content">
           
 
-  <div id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-       
-      
-      OK! 目前共計 33 篇文章。 繼續努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
       
+      
+        <h1 class="post-title">
+          
+          
+            
+              DirectAdmin 镜像
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2014-06-16
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/directadmin-mirror/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="directadmin-mirror/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
       
       
 
       
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2015">2015</h2>
+        <p>由于最近在帮朋友 IDC 打理一些事情的时候，发现安装 DirectAdmin 太慢了，所以联系了下 DirectAdmin 官方做了这个镜像。</p>
+<p>与其他镜像不同的是，窝同时提供了 IPv4 和 IPv6 啊哈哈哈还有 Rsync。</p>
+<p>地址是：<a href="http://files19.directadmin.com/" target="_blank" rel="external">http://files19.directadmin.com/</a></p>
+<p>更新时间是 UTC 每天的 0:00，就是北京时间的早上 8 点。请尽量避免在这个时间内更新。</p>
+<p>另外因为备案的问题，这个镜像放在了 Linode 日本机房，至于速度的话，通过调整过的 <a href="http://www.tcpedge.com/" target="_blank" rel="external">TCPEdge</a> 加速的镜像下载速度也很快，百兆的话一般都能跑满带宽。</p>
+<p>啊，对了，如果需要自己做镜像的又懒得联系官方的话，直接用以下命令同步即可：</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/usr/bin/rsync</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">recursive</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">perms</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">links</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">times</span> <span class="literal">-</span><span class="comment">W</span> <span class="comment">files19</span><span class="string">.</span><span class="comment">directadmin</span><span class="string">.</span><span class="comment">com::directadmin</span> <span class="comment">/var/www/html/services</span></span><br></pre></td></tr></table></figure>
+<p>嗯，就是这样。喵。</p>
+
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/fuck-solusvm-again/">修复 SolusVM 添加 IP 之后无法使用的 Bug</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/hostbill-solusvm-disaster/">HostBill + SolusVM = Disaster</a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/build-anycast-network-using-low-cost-vm/">
-              使用 BIRD 和 ExaBGP 低成本自建 AnyCast 网络
-            </a>
-        
-      </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 10-11 </span>
-      </div>
-
+      
     </div>
   </div>
 
@@ -195,80 +230,16 @@
 
     
 
-      
-      
-      
-
-      
-      
-
-      
-
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/workaround-of-docker-cap-set-file/">
-              Docker cpio: 'cap_set_file' 的临时解决方法
-            </a>
-        
-      </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 07-07 </span>
-      </div>
-
-    </div>
-  </div>
-
-
-
     
-
-      
-      
-      
-
-      
+      <div class="comments" id="comments">
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2014">2014</h2>
-        </div>
-      
-      
-
-      
-
-  <div class="post post-type-normal">
-    <div class="post-header">
-
-      <div class="post-title">
-        
-            <a class="post-title-link" href="/analysis-of-juhe-data-who-steal-user-contacts-book/">
-              关于聚合数据窃取用户通讯录的完整分析
-            </a>
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
         
       </div>
-
-      <div class="post-meta">
-        <span class="post-time"> 11-04 </span>
-      </div>
-
-    </div>
-  </div>
-
-
-
     
-
   </div>
-
-  
-  <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/11/">11</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
-  </div>
-
 
 
         </div>
@@ -290,6 +261,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -355,6 +335,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目錄</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -397,8 +388,6 @@
 
   
   
-  
-
 
   
   <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
@@ -416,6 +405,98 @@
 
   
   
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+
 
 
   <script type="text/javascript">
@@ -429,6 +510,33 @@
   
 
   
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'directadmin-mirror/';
+      var disqus_title = 'DirectAdmin 镜像';
+      var disqus_url = 'https://blog.swan.im/directadmin-mirror/';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
 
   
   

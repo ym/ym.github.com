@@ -45,7 +45,7 @@
 
 
 
-  <title> Aveline's Blog </title>
+  <title> 关于聚合数据窃取用户通讯录的完整分析 // Aveline's Blog </title>
 </head>
 
 <body>
@@ -59,9 +59,7 @@
   </div>
 <![endif]-->
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -147,9 +145,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
+
   <div id="posts" class="posts-expand">
     
-      
 
   <div class="post post-type-normal ">
     <div class="post-header">
@@ -160,159 +158,7 @@
           
           
             
-              <a class="post-title-link" href="/build-anycast-network-using-low-cost-vm/">
-                使用 BIRD 和 ExaBGP 低成本自建 AnyCast 网络
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2015-10-11
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/build-anycast-network-using-low-cost-vm/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="build-anycast-network-using-low-cost-vm/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/workaround-of-docker-cap-set-file/">
-                Docker cpio: 'cap_set_file' 的临时解决方法
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2015-07-07
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/workaround-of-docker-cap-set-file/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="workaround-of-docker-cap-set-file/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>目前从 Docker 在 GitHub 上的 <a href="https://github.com/docker/docker/issues/6980" target="_blank" rel="external">Issue #6980 cap_set_file not permitted on aufs storage driver only</a> 来看，似乎只有 Ubuntu 14.04 LTS 上会重现这个问题。</p>
-<p>解决方法是：</p>
-<p>更换 Docker 的 Storage driver，里面 <a href="https://github.com/docker/docker/issues/6980#issuecomment-94784262" target="_blank" rel="external">@Thorndike</a> 提到更换成 <code>devicemapper</code> 驱动即可，但是很不幸的在我的机器上跑不了，错误信息如下：</p>
-<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Udev sync <span class="keyword">is</span> <span class="keyword">not</span> supported. This will lead <span class="keyword">to</span> unexpected behavior, data loss <span class="keyword">and</span> errors. <span class="keyword">For</span> more information, see https:<span class="comment">//docs.docker.com/reference/commandline/cli/#daemon-storage-driver-option</span></span><br></pre></td></tr></table></figure>
-<p>然而 <a href="https://docs.docker.com/reference/commandline/cli/#daemon-storage-driver-option" target="_blank" rel="external">https://docs.docker.com/reference/commandline/cli/#daemon-storage-driver-option</a> 并没有给出任何有用的信息，还是在 GitHub 上找到了<a href="https://github.com/munkyboy" target="_blank" rel="external">答案</a>：</p>
-<p>把 <code>/var/lib/docker/trust/official.json</code> 删掉，然后重启 docker 即可。</p>
-<p><strong>嗯，然而对 docker 1.7.0 并不起作用，只能降级到 1.6.2。</strong></p>
-<p>可惜我对 <code>devicemapper</code> 曾经在 docker 0.x 时代搞到 kernel panic 这件事儿仍然心有余悸，所以换成了 <code>overlay</code> 驱动。</p>
-<p>由于 Trusty 的内核并不支持 <code>overlay</code>，需要首先升级到 Vivid 的内核：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:canonical-kernel-team/ppa</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install linux-headers-generic-lts-vivid linux-image-generic-lts-vivid</span><br></pre></td></tr></table></figure>
-<p>然后重启使内核生效</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
-<p>修改 Docker 的 <code>storage driver</code>，在 <code>/etc/default/docker</code> 里加一行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DOCKER_OPTS=<span class="string">"<span class="variable">$DOCKER_OPTS</span> --storage-driver=overlay"</span></span><br></pre></td></tr></table></figure>
-<p>然后重启 docker</p>
-<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="keyword">service</span> docker <span class="literal">restart</span></span><br></pre></td></tr></table></figure>
-<p>重启后执行 <code>docker info</code> 即可看到：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Containers:</span> <span class="number">1</span></span><br><span class="line"><span class="string">Images:</span> <span class="number">19</span></span><br><span class="line">Storage <span class="string">Driver:</span> overlay</span><br><span class="line"> Backing <span class="string">Filesystem:</span> extfs</span><br><span class="line">Execution <span class="string">Driver:</span> native-<span class="number">0.2</span></span><br><span class="line">Logging <span class="string">Driver:</span> json-file</span><br><span class="line">Kernel <span class="string">Version:</span> <span class="number">3.19</span>.0-<span class="number">22</span>-generic</span><br><span class="line">Operating <span class="string">System:</span> Ubuntu <span class="number">14.04</span>.2 LTS</span><br><span class="line"><span class="string">CPUs:</span> <span class="number">16</span></span><br><span class="line">Total <span class="string">Memory:</span> <span class="number">47.16</span> GiB</span><br><span class="line"><span class="string">Name:</span> ci</span><br><span class="line"><span class="string">Registry:</span> <span class="string">https:</span><span class="comment">//index.docker.io/v1/</span></span><br><span class="line"><span class="string">WARNING:</span> No swap limit support</span><br></pre></td></tr></table></figure>
-<p>嗯，已经生效啦。再 build 就不会遇到 <code>cap_set_file not permitted</code> 了。</p>
-<p>—EOF—</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
-    
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/analysis-of-juhe-data-who-steal-user-contacts-book/">
-                关于聚合数据窃取用户通讯录的完整分析
-              </a>
+              关于聚合数据窃取用户通讯录的完整分析
             
           
         </h1>
@@ -344,8 +190,7 @@
       
 
       
-        
-          <h2 id="起因">起因</h2><p>之前在测试聚合数据的 <a href="https://mega.co.nz/#!pE9iWLxD!bdAA9EA9R6finccP701kQPBjCdkqMtKT2-agKeMb0LA" target="_blank" rel="external">iOS SDK Demo</a> 的时候，发现会请求通讯录权限 … 当时刚睡醒没多久，拿了自己在用的手机，还点了 Allow。</p>
+        <h2 id="起因">起因</h2><p>之前在测试聚合数据的 <a href="https://mega.co.nz/#!pE9iWLxD!bdAA9EA9R6finccP701kQPBjCdkqMtKT2-agKeMb0LA" target="_blank" rel="external">iOS SDK Demo</a> 的时候，发现会请求通讯录权限 … 当时刚睡醒没多久，拿了自己在用的手机，还点了 Allow。</p>
 <p>然后我就在 Charles 里发现了一个很大的请求，很好奇，便对 SDK 进行了逆向工程，拿到了解密方法，发现我的整个通讯录都被上传了。</p>
 <p>于是我在 V2EX 发了一个帖子 <a href="http://www.v2ex.com/t/142645#reply93" target="_blank" rel="external">请不要使用聚合数据的 SDK</a>，后来被聚合的工作人员看到，他们是<a href="http://www.v2ex.com/t/142966#reply93" target="_blank" rel="external">这样</a>回复的：</p>
 <blockquote><br>聚合数据一直致力于为开发者提供更为优质的数据服务，并基于此出发点，推出了聚合数据SDK，该SDK整合了目前聚合数据所提供的所有数据接口，此次aveline反馈的聚合数据SDK读取通讯录问题，实质上是聚合数据<strong>为了方便用户使用由聚合数据提供的短信API服务</strong>。此举对于非短信API服务使用者可能会造成一定不适，考虑到这一点，我们立即对于IOS版与Android版SDK进行了更新，不再要求读取通讯录权限，并对于此前为开发者用户考虑不周的行为表示诚挚歉意，并保证不再进行此类有侵犯用户隐私嫌疑的行为。<br><br><br><br>聚合数据是一个严格恪守行业底线的平台，聚合数据在进行数据分析的过程中极为注重隐私的保护，数据都进行了严格的加密处理，所搜集的数据仅用于改进网站服务本身，并未用于任何非法用途，对于聚合数据注册账号及密码，也进行了严格的加密措施。<br></blockquote>
@@ -553,7 +398,6 @@
 <h2 id="结尾">结尾</h2><p>最后，请聚合数据尽快删除存储在服务器上的用户隐私数据并公开承认且道歉。</p>
 <p>以及，贵司不如帮员工报个新东方什么的英语培训班？如果新东方救不了的话，不如试试找老罗？代码里各种 typo 看的我都快吐了 :-(</p>
 
-        
       
     </div>
 
@@ -561,21 +405,39 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/workaround-of-docker-cap-set-file/">Docker cpio: 'cap_set_file' 的临时解决方法</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/build-manageable-mirror-using-zfs/">使用 ZFS 构建易管理的镜像服务器</a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </div>
   </div>
 
 
-    
-  </div>
 
-  
-  <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+    
+
+    
+      <div class="comments" id="comments">
+        
+          <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
+        
+      </div>
+    
   </div>
 
 
@@ -598,6 +460,15 @@
   <div id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            本站概覽
+          </li>
+        </ul>
       
 
       <div class="site-overview">
@@ -663,6 +534,17 @@
       </div>
 
       
+        <div class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合数据_SDK_(iOS_SDK_v1-0-2)"><span class="nav-number">2.1.</span> <span class="nav-text">聚合数据 SDK (iOS SDK v1.0.2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#短信验证码_SDK_(iOS_SDK_v1-0-1)"><span class="nav-number">2.2.</span> <span class="nav-text">短信验证码 SDK (iOS SDK v1.0.1)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条码数据_SDK_(iOS_SDK_v1-0-2)"><span class="nav-number">2.3.</span> <span class="nav-text">条码数据 SDK (iOS SDK v1.0.2)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#比价数据_SDK_(iOS_SDK_v1-0-0)"><span class="nav-number">2.4.</span> <span class="nav-text">比价数据 SDK (iOS SDK v1.0.0)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电商数据_SDK_(iOS_SDK_v1-0-0)"><span class="nav-number">2.5.</span> <span class="nav-text">电商数据 SDK (iOS SDK v1.0.0)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#聚合基站_(2-3-4)"><span class="nav-number">2.6.</span> <span class="nav-text">聚合基站 (2.3.4)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#你查查_(1-6-4)"><span class="nav-number">2.7.</span> <span class="nav-text">你查查 (1.6.4)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#受影响列表"><span class="nav-number">3.</span> <span class="nav-text">受影响列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结尾"><span class="nav-number">4.</span> <span class="nav-text">结尾</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </div>
+      
 
     </div>
   </div>
@@ -721,6 +603,100 @@
   <script type="text/javascript" src="/js/search-toggle.js"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.3" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      }, { duration: 100 });
+    }
+
+  });
+</script>
+
+
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
@@ -744,15 +720,15 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'av2b';
-      var disqus_identifier = 'index.html';
-      var disqus_title = '';
-      var disqus_url = '';
+      var disqus_identifier = 'analysis-of-juhe-data-who-steal-user-contacts-book/';
+      var disqus_title = '关于聚合数据窃取用户通讯录的完整分析';
+      var disqus_url = 'https://blog.swan.im/analysis-of-juhe-data-who-steal-user-contacts-book/';
 
       (function(){
         var dsq = document.createElement('script');
         dsq.type = 'text/javascript';
         dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       }());
     </script>

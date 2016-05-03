@@ -1,266 +1,40 @@
-<!doctype html>
-<html class="theme-next  theme-next-mist">
-<head>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   
-
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
-
-
-
-
-  <meta name="keywords" content="Hexo,next" />
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Aveline's Blog" type="application/atom+xml" />
-
-
-
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: 'Mist',
-    analytics: {
-      google: 'UA-20336289-2'
-    },
-    sidebar: 'post'
-  };
-</script>
-
-
-
-
-  <title> Aveline's Blog </title>
-</head>
-
-<body>
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
-
-  <div class="container one-column 
-   page-home 
-">
-    <div class="headband"></div>
-
-    <div id="header" class="header">
-      <div class="header-inner">
-        <h1 class="site-meta">
-  <span class="logo-line-before"><i></i></span>
-  <a href="/" class="brand">
-      <span class="logo">
-        <i class="icon-logo"></i>
-      </span>
-      <span class="site-title">Aveline's Blog</span>
-  </a>
-  <span class="logo-line-after"><i></i></span>
-</h1>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<div class="site-nav">
+  <title><![CDATA[Aveline's Blog]]></title>
   
-
+  <link href="/atom.xml" rel="self"/>
+  <link href="https://blog.swan.im//"/>
+  <updated>2015-10-10T18:00:48.000Z</updated>
+  <id>https://blog.swan.im//</id>
   
-    <ul id="menu" class="menu menu-left">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/">
-            <i class="menu-item-icon icon-home"></i> <br />
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives">
-            <i class="menu-item-icon icon-archives"></i> <br />
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags">
-            <i class="menu-item-icon icon-tags"></i> <br />
-            標籤
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  
-<form class="site-search-form">
-  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
-</form>
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install', 'h7fLV84amzbZPuPcVWP6','2.0.0');
-</script>
-
-<div class="site-search-toggle"></div>
-    </div>
-  
-</div>
-
-
-      </div>
-    </div>
-
-    <div id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-  <div id="posts" class="posts-expand">
+  <author>
+    <name><![CDATA[Aveline Swan]]></name>
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/build-anycast-network-using-low-cost-vm/">
-                使用 BIRD 和 ExaBGP 低成本自建 AnyCast 网络
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2015-10-11
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/build-anycast-network-using-low-cost-vm/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="build-anycast-network-using-low-cost-vm/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[使用 BIRD 和 ExaBGP 低成本自建 AnyCast 网络]]></title>
+    <link href="https://blog.swan.im/build-anycast-network-using-low-cost-vm/"/>
+    <id>https://blog.swan.im/build-anycast-network-using-low-cost-vm/</id>
+    <published>2015-10-10T18:00:48.000Z</published>
+    <updated>2015-10-10T18:00:48.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/workaround-of-docker-cap-set-file/">
-                Docker cpio: 'cap_set_file' 的临时解决方法
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2015-07-07
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/workaround-of-docker-cap-set-file/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="workaround-of-docker-cap-set-file/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>目前从 Docker 在 GitHub 上的 <a href="https://github.com/docker/docker/issues/6980" target="_blank" rel="external">Issue #6980 cap_set_file not permitted on aufs storage driver only</a> 来看，似乎只有 Ubuntu 14.04 LTS 上会重现这个问题。</p>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Docker cpio: 'cap_set_file' 的临时解决方法]]></title>
+    <link href="https://blog.swan.im/workaround-of-docker-cap-set-file/"/>
+    <id>https://blog.swan.im/workaround-of-docker-cap-set-file/</id>
+    <published>2015-07-07T15:02:07.000Z</published>
+    <updated>2015-07-08T04:00:23.000Z</updated>
+    <content type="html"><![CDATA[<p>目前从 Docker 在 GitHub 上的 <a href="https://github.com/docker/docker/issues/6980" target="_blank" rel="external">Issue #6980 cap_set_file not permitted on aufs storage driver only</a> 来看，似乎只有 Ubuntu 14.04 LTS 上会重现这个问题。</p>
 <p>解决方法是：</p>
 <p>更换 Docker 的 Storage driver，里面 <a href="https://github.com/docker/docker/issues/6980#issuecomment-94784262" target="_blank" rel="external">@Thorndike</a> 提到更换成 <code>devicemapper</code> 驱动即可，但是很不幸的在我的机器上跑不了，错误信息如下：</p>
 <figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Udev sync <span class="keyword">is</span> <span class="keyword">not</span> supported. This will lead <span class="keyword">to</span> unexpected behavior, data loss <span class="keyword">and</span> errors. <span class="keyword">For</span> more information, see https:<span class="comment">//docs.docker.com/reference/commandline/cli/#daemon-storage-driver-option</span></span><br></pre></td></tr></table></figure>
@@ -280,72 +54,20 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Containers:</span> <span class="number">1</span></span><br><span class="line"><span class="string">Images:</span> <span class="number">19</span></span><br><span class="line">Storage <span class="string">Driver:</span> overlay</span><br><span class="line"> Backing <span class="string">Filesystem:</span> extfs</span><br><span class="line">Execution <span class="string">Driver:</span> native-<span class="number">0.2</span></span><br><span class="line">Logging <span class="string">Driver:</span> json-file</span><br><span class="line">Kernel <span class="string">Version:</span> <span class="number">3.19</span>.0-<span class="number">22</span>-generic</span><br><span class="line">Operating <span class="string">System:</span> Ubuntu <span class="number">14.04</span>.2 LTS</span><br><span class="line"><span class="string">CPUs:</span> <span class="number">16</span></span><br><span class="line">Total <span class="string">Memory:</span> <span class="number">47.16</span> GiB</span><br><span class="line"><span class="string">Name:</span> ci</span><br><span class="line"><span class="string">Registry:</span> <span class="string">https:</span><span class="comment">//index.docker.io/v1/</span></span><br><span class="line"><span class="string">WARNING:</span> No swap limit support</span><br></pre></td></tr></table></figure>
 <p>嗯，已经生效啦。再 build 就不会遇到 <code>cap_set_file not permitted</code> 了。</p>
 <p>—EOF—</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>目前从 Docker 在 GitHub 上的 <a href="https://github.com/docker/docker/issues/6980" target="_blank" rel="external">Issue #6980 cap_set_file not]]>
+    </summary>
     
-      
-
-  <div class="post post-type-normal ">
-    <div class="post-header">
-
-      
-      
-        <h1 class="post-title">
-          
-          
-            
-              <a class="post-title-link" href="/analysis-of-juhe-data-who-steal-user-contacts-book/">
-                关于聚合数据窃取用户通讯录的完整分析
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          發表於 2014-11-04
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="/analysis-of-juhe-data-who-steal-user-contacts-book/#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="analysis-of-juhe-data-who-steal-user-contacts-book/"></span>
-            </a>
-          </span>
-          
-        
-      </div>
-    </div>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h2 id="起因">起因</h2><p>之前在测试聚合数据的 <a href="https://mega.co.nz/#!pE9iWLxD!bdAA9EA9R6finccP701kQPBjCdkqMtKT2-agKeMb0LA" target="_blank" rel="external">iOS SDK Demo</a> 的时候，发现会请求通讯录权限 … 当时刚睡醒没多久，拿了自己在用的手机，还点了 Allow。</p>
+  </entry>
+  
+  <entry>
+    <title><![CDATA[关于聚合数据窃取用户通讯录的完整分析]]></title>
+    <link href="https://blog.swan.im/analysis-of-juhe-data-who-steal-user-contacts-book/"/>
+    <id>https://blog.swan.im/analysis-of-juhe-data-who-steal-user-contacts-book/</id>
+    <published>2014-11-04T01:17:42.000Z</published>
+    <updated>2014-11-04T05:27:14.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="起因">起因</h2><p>之前在测试聚合数据的 <a href="https://mega.co.nz/#!pE9iWLxD!bdAA9EA9R6finccP701kQPBjCdkqMtKT2-agKeMb0LA" target="_blank" rel="external">iOS SDK Demo</a> 的时候，发现会请求通讯录权限 … 当时刚睡醒没多久，拿了自己在用的手机，还点了 Allow。</p>
 <p>然后我就在 Charles 里发现了一个很大的请求，很好奇，便对 SDK 进行了逆向工程，拿到了解密方法，发现我的整个通讯录都被上传了。</p>
 <p>于是我在 V2EX 发了一个帖子 <a href="http://www.v2ex.com/t/142645#reply93" target="_blank" rel="external">请不要使用聚合数据的 SDK</a>，后来被聚合的工作人员看到，他们是<a href="http://www.v2ex.com/t/142966#reply93" target="_blank" rel="external">这样</a>回复的：</p>
 <blockquote><br>聚合数据一直致力于为开发者提供更为优质的数据服务，并基于此出发点，推出了聚合数据SDK，该SDK整合了目前聚合数据所提供的所有数据接口，此次aveline反馈的聚合数据SDK读取通讯录问题，实质上是聚合数据<strong>为了方便用户使用由聚合数据提供的短信API服务</strong>。此举对于非短信API服务使用者可能会造成一定不适，考虑到这一点，我们立即对于IOS版与Android版SDK进行了更新，不再要求读取通讯录权限，并对于此前为开发者用户考虑不周的行为表示诚挚歉意，并保证不再进行此类有侵犯用户隐私嫌疑的行为。<br><br><br><br>聚合数据是一个严格恪守行业底线的平台，聚合数据在进行数据分析的过程中极为注重隐私的保护，数据都进行了严格的加密处理，所搜集的数据仅用于改进网站服务本身，并未用于任何非法用途，对于聚合数据注册账号及密码，也进行了严格的加密措施。<br></blockquote>
@@ -552,219 +274,587 @@
 <p>另外，聚合数据首页上链接过去的 <a href="http://www.jikexueyuan.com/course/324.html" target="_blank" rel="external">聚合数据 iOS 项目开发实战：条码查询器</a> 内课程资料里的 Demo 亦包含会上传通讯录的代码。这里限于版权原因就不提供下载了。</p>
 <h2 id="结尾">结尾</h2><p>最后，请聚合数据尽快删除存储在服务器上的用户隐私数据并公开承认且道歉。</p>
 <p>以及，贵司不如帮员工报个新东方什么的英语培训班？如果新东方救不了的话，不如试试找老罗？代码里各种 typo 看的我都快吐了 :-(</p>
-
-        
-      
-    </div>
-
-    <div class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </div>
-  </div>
-
-
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="起因">起因</h2><p>之前在测试聚合数据的 <a href="https://mega.co.nz/#!pE9iWLxD!bdAA9EA9R6finccP701kQPBjCdkqMtKT2-agKeMb0LA" target="_blank" rel="ex]]>
+    </summary>
     
-  </div>
-
+  </entry>
   
-  <div class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
-  </div>
-
-
-        </div>
-
-        
-      </div>
-
-
-      
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="https://en.gravatar.com/userimage/15516490/ccf4829ea2de640a573974d1e17698ee.png?size=360" alt="Aveline Swan" />
-          <p class="site-author-name">Aveline Swan</p>
-        </div>
-        <p class="site-description motion-element"></p>
-        <div class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">33</span>
-              <span class="site-state-item-name">文章</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            
-              <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分類</span>
-              
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">標籤</span>
-              </a>
-          </div>
-
-        </div>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml">
-              <i class="menu-item-icon icon-feed"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-              <a href="https://github.com/ym" target="_blank">GitHub</a>
-            </span>
-            
-              <span class="links-of-author-item">
-              <a href="https://twitter.com/Aveline_Swan" target="_blank">Twitter</a>
-            </span>
-            
-              <span class="links-of-author-item">
-              <a href="http://www.douban.com/people/avelineswan/" target="_blank">DouBan</a>
-            </span>
-            
-          
-        </div>
-
-        
-        
-
-      </div>
-
-      
-
-    </div>
-  </div>
-
-
-    </div>
-
-    <div id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">
-  
-  &copy; &nbsp;  2005 - 
-  2016
-  <span class="with-love">
-    <i class="icon-heart"></i>
-  </span>
-  <span class="author">Aveline Swan</span>
-</div>
-
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
-</div>
-
-<div class="theme-info">
-  主題 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-
-      </div>
-    </div>
-
-    <div class="back-to-top"></div>
-  </div>
-
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
-  
-
-  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.3" id="motion.fallback"></script>
-
-
-
-  <script type="text/javascript" src="/js/search-toggle.js"></script>
-
-  
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      if (CONFIG.sidebar === 'always') {
-        displaySidebar();
-      }
-    });
-  </script>
-
-  
-
-  
-  
-  
-
-  
-
+  <entry>
+    <title><![CDATA[使用 ZFS 构建易管理的镜像服务器]]></title>
+    <link href="https://blog.swan.im/build-manageable-mirror-using-zfs/"/>
+    <id>https://blog.swan.im/build-manageable-mirror-using-zfs/</id>
+    <published>2014-08-28T12:11:22.000Z</published>
+    <updated>2014-08-28T12:11:53.000Z</updated>
+    <content type="html"><![CDATA[<p>我们在某机房托管了很多服务器，更新和初次安装时经常会占用大量下行带宽（虽然下行是不收钱的），也拖慢了部署机器的速度，于是我在机房里搭建了一个镜像服务器。</p>
+<p>一开始我使用的是 XFS 作为文件系统，在 rsync 列目录和 du 统计文件大小时经常挂住，系统 load 常常能到 60，在某天 … 硬盘终于挂了</p>
+<p>于是经由朋友诱惑换到了 ZFS，再也无需担心 load 的问题了 … 抹泪啊真是</p>
+<h2 id="那么，ZFS_有啥好的？">那么，ZFS 有啥好的？</h2><p>首先镜像服务不只是镜像一个发行版，由于历史遗留原因，我们同时在用的发行版有 Red Hat、CentOS、Debian、Ubuntu。</p>
+<p>而各种发行版的同步方式并不都是 rsync，如果都是 rsync 的话，加个 <code>--report</code> 参数就能知道每次变更的大小了。那我之前是怎么做的呢？</p>
+<p>先 <code>du -sh ./</code> 记录一遍，然后再 <code>du -sh ./</code> 记录一遍，算差值。<code>du</code> 扫目录的时候经常 load 会很高，主要都在等 IO 了。</p>
+<p>而换到 ZFS 之后，每个镜像项目是一个单独的 volume，我只需要记录卷占用的变化就可以了，还用扫什么目录啊！</p>
+<p>好话说完了那么：</p>
+<h2 id="ZFS_有啥不好的呢">ZFS 有啥不好的呢</h2><p>ZFS 需要大量的系统资源，另外对 32 位系统的支持不是很好。<br>当然这都不算问题啦，内存也不贵多买几条就是了然后现在还有人在服务器上用 32 位系统嘛（</p>
+<p>下面来讲讲怎么用 …</p>
+<h2 id="安装_ZFS_on_Linux">安装 ZFS on Linux</h2><p>以下例子中系统环境为 <code>Debian GNU/Linux 7.6 (wheezy) x86_64</code> </p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//archive.zfsonlinux.org/debian/pool/main/z/zfsonlinux/zfsonlinux_2%7Ewheezy_all.deb</span></span><br><span class="line">sudo dpkg -<span class="tag">i</span> zfsonlinux_2~wheezy_all<span class="class">.deb</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install debian-zfs</span><br></pre></td></tr></table></figure>
+<p>需要注意的是安装时会编译内核模块，会比较慢，耐心等待就好。</p>
+<h2 id="创建存储池">创建存储池</h2><p>官方文档里推荐是使用 <code>/dev/disk/by-id/</code> 里的名称来创建存储池，用 <code>/dev/sd*</code> 可能偶尔会导致一些导入错误。</p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zpool create -o ashift=12 mpool /dev/disk/by-id/scsi-<span class="number">14d534654202</span><span class="number">020207a348</span>b11c863ea<span class="number">4a9099563</span>cb847fbcf</span><br></pre></td></tr></table></figure>
+<p>创建完成后可以用 <code>zpool list</code> 命令来检查是否已经成功创建：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">NAME</span>    <span class="tag">SIZE</span>  <span class="tag">ALLOC</span>   <span class="tag">FREE</span>    <span class="tag">CAP</span>  <span class="tag">DEDUP</span>  <span class="tag">HEALTH</span>  <span class="tag">ALTROOT</span></span><br><span class="line"><span class="tag">mpool</span>  1<span class="class">.81T</span>  1<span class="class">.72T</span>  95<span class="class">.7G</span>    94%  1<span class="class">.00x</span>  <span class="tag">ONLINE</span>  <span class="tag">-</span></span><br></pre></td></tr></table></figure>
+<h2 id="管理镜像项目">管理镜像项目</h2><p>首先为这个镜像创建一个 volume：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zfs <span class="built_in">create</span> mpool/puppetlabs-apt</span><br></pre></td></tr></table></figure>
+<p>然后进行初次同步</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">cd</span> <span class="comment">/mpool/puppetlabs</span><span class="literal">-</span><span class="comment">apt</span></span><br><span class="line"><span class="comment">rsync</span> <span class="literal">-</span><span class="comment">aHvh</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span><span class="literal">-</span><span class="comment">delay</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">owner</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">no</span><span class="literal">-</span><span class="comment">group</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">stats</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">safe</span><span class="literal">-</span><span class="comment">links</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">timeout=120</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">contimeout=120</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delay</span><span class="literal">-</span><span class="comment">updates</span> <span class="literal">-</span><span class="comment">4</span> <span class="comment">rsync://apt</span><span class="string">.</span><span class="comment">puppetlabs</span><span class="string">.</span><span class="comment">com/packages/apt/</span> <span class="comment">/data/mirror/storage/puppet</span><span class="literal">-</span><span class="comment">deb</span></span><br></pre></td></tr></table></figure>
+<p>这就完了？当然没有。</p>
+<p>是不是在 <code>apt-get update</code> 的时候遇到过以下的提示？</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/source/Sources  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/source/Sources  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/binary-amd64/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/binary-amd64/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">W</span>: <span class="string">Failed to fetch http://mirrors.agslb.com/puppetlabs-apt/dists/trusty/main/binary-i386/Packages  404  Not Found</span></span><br><span class="line"></span><br><span class="line"><span class="groovy"><span class="string">W:</span> Failed to fetch <span class="string">http:</span><span class="comment">//mirrors.agslb.com/puppetlabs-apt/dists/trusty/dependencies/binary-i386/Packages  404  Not Found</span></span></span></span></span></span></span><br></pre></td></tr></table></figure>
+<p>嗯，有了 ZFS，这种现象就不会有啦~</p>
+<p>在增量同步前先对当前本地镜像做一次 snapshot：</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zfs <span class="keyword">snapshot</span> mpool/puppetlabs-apt<span class="variable">@20140829</span></span><br></pre></td></tr></table></figure>
+<p>然后挂载到一个新目录，再将 nginx 里的路径指向这个新目录：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t zfs mpool<span class="regexp">/puppetlabs-apt@20140829 /</span>var<span class="regexp">/www/mi</span>rror<span class="regexp">/puppetlabs-apt/</span><span class="number">20140829</span></span><br></pre></td></tr></table></figure></p>
+<p>同步完成后，再将 nginx 里的路径指向原来的目录即可。是不是很方便呐~</p>
+<p>— EOF —</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>我们在某机房托管了很多服务器，更新和初次安装时经常会占用大量下行带宽（虽然下行是不收钱的），也拖慢了部署机器的速度，于是我在机房里搭建了一个镜像服务器。</p>
+<p>一开始我使用的是 XFS 作为文件系统，在 rsync 列目录和 du 统计文件大小时经常挂住，系统 lo]]>
+    </summary>
     
-      
+  </entry>
+  
+  <entry>
+    <title><![CDATA[修复 SolusVM 添加 IP 之后无法使用的 Bug]]></title>
+    <link href="https://blog.swan.im/fuck-solusvm-again/"/>
+    <id>https://blog.swan.im/fuck-solusvm-again/</id>
+    <published>2014-06-30T22:21:53.000Z</published>
+    <updated>2014-06-30T22:27:19.000Z</updated>
+    <content type="html"><![CDATA[<p>问题重现步骤：</p>
+<ol>
+<li>在 SolusVM 里给 VPS 添加一个新 IP；</li>
+<li>在 VPS 里加上这个 IP：<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@da2 ~]<span class="comment"># vi /etc/sysconfig/network-scripts/ifcfg-eth0:0</span></span><br><span class="line"><span class="constant">DEVICE</span>=eth0:0</span><br><span class="line"><span class="constant">BOOTPROTO</span>=static</span><br><span class="line"><span class="constant">ONPARENT</span>=yes</span><br><span class="line"><span class="constant">IPADDR</span>=xxx.xx.xxx.5</span><br><span class="line"><span class="constant">GATEWAY</span>=xxx.xx.xxx.1</span><br><span class="line"><span class="constant">NETMASK</span>=255.255.255.0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>执行 <code>ifup eth0:0</code>；</p>
+<ol>
+<li>VPS 内可以接收到新 IP 的包，但是包 发不出去：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">01<span class="pseudo">:55</span><span class="pseudo">:22</span><span class="class">.958310</span> <span class="tag">IP</span> 218<span class="class">.xx</span><span class="class">.xxx</span><span class="class">.5</span> &gt; 123<span class="class">.xx</span><span class="class">.xxx</span><span class="class">.82</span>: <span class="tag">ICMP</span> <span class="tag">echo</span> <span class="tag">reply</span>, <span class="tag">id</span> 46410, <span class="tag">seq</span> 163, <span class="tag">length</span> 64</span><br><span class="line">01<span class="pseudo">:55</span><span class="pseudo">:23</span><span class="class">.959400</span> <span class="tag">IP</span> 123<span class="class">.xx</span><span class="class">.xxx</span><span class="class">.82</span> &gt; 218<span class="class">.xx</span><span class="class">.xxx</span><span class="class">.5</span>: <span class="tag">ICMP</span> <span class="tag">echo</span> <span class="tag">request</span>, <span class="tag">id</span> 46410, <span class="tag">seq</span> 164, <span class="tag">length</span> 64</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在其他机器上执行 <code>arp -an</code> 显示为 [incomplete]。</p>
+<p>嗯，其实找了半天根本不是 CentOS 的问题 …<br>是啥的呢，你猜对啦~ 又是 SolusVM！</p>
+<p>SolusVM 使用了 ebtables 来过滤 IP 盗用的行为，但是新增 IP 并没有更新 ebtables 里的记录，所以这个新增 IP 自然是用不了了。</p>
+<p>不过解决方法倒是很简单，重启主机上的 solusvm-ipsecure 服务即可：<code>service solusvm-ipsecure restart</code></p>
+<p>最后，SolusVM 你去死去死去死！去年就上报了的 Bug 为什么还不修！</p>
+<p><img src="/content/images/2014/Jul/09.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>问题重现步骤：</p>
+<ol>
+<li>在 SolusVM 里给 VPS 添加一个新 IP；</li>
+<li>在 VPS 里加上这个 IP：<figure class="highlight makefile"><table><tr><td class="gutter">]]>
+    </summary>
     
-
-    <script type="text/javascript">
-      var disqus_shortname = 'av2b';
-      var disqus_identifier = 'index.html';
-      var disqus_title = '';
-      var disqus_url = '';
-
-      (function(){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }());
-    </script>
+  </entry>
   
-
-
-
-
+  <entry>
+    <title><![CDATA[DirectAdmin 镜像]]></title>
+    <link href="https://blog.swan.im/directadmin-mirror/"/>
+    <id>https://blog.swan.im/directadmin-mirror/</id>
+    <published>2014-06-15T19:02:39.000Z</published>
+    <updated>2014-06-15T19:03:13.000Z</updated>
+    <content type="html"><![CDATA[<p>由于最近在帮朋友 IDC 打理一些事情的时候，发现安装 DirectAdmin 太慢了，所以联系了下 DirectAdmin 官方做了这个镜像。</p>
+<p>与其他镜像不同的是，窝同时提供了 IPv4 和 IPv6 啊哈哈哈还有 Rsync。</p>
+<p>地址是：<a href="http://files19.directadmin.com/" target="_blank" rel="external">http://files19.directadmin.com/</a></p>
+<p>更新时间是 UTC 每天的 0:00，就是北京时间的早上 8 点。请尽量避免在这个时间内更新。</p>
+<p>另外因为备案的问题，这个镜像放在了 Linode 日本机房，至于速度的话，通过调整过的 <a href="http://www.tcpedge.com/" target="_blank" rel="external">TCPEdge</a> 加速的镜像下载速度也很快，百兆的话一般都能跑满带宽。</p>
+<p>啊，对了，如果需要自己做镜像的又懒得联系官方的话，直接用以下命令同步即可：</p>
+<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/usr/bin/rsync</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">recursive</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">perms</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">links</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">delete</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">times</span> <span class="literal">-</span><span class="comment">W</span> <span class="comment">files19</span><span class="string">.</span><span class="comment">directadmin</span><span class="string">.</span><span class="comment">com::directadmin</span> <span class="comment">/var/www/html/services</span></span><br></pre></td></tr></table></figure>
+<p>嗯，就是这样。喵。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>由于最近在帮朋友 IDC 打理一些事情的时候，发现安装 DirectAdmin 太慢了，所以联系了下 DirectAdmin 官方做了这个镜像。</p>
+<p>与其他镜像不同的是，窝同时提供了 IPv4 和 IPv6 啊哈哈哈还有 Rsync。</p>
+<p>地址是：<a ]]>
+    </summary>
+    
+  </entry>
   
+  <entry>
+    <title><![CDATA[HostBill + SolusVM = Disaster]]></title>
+    <link href="https://blog.swan.im/hostbill-solusvm-disaster/"/>
+    <id>https://blog.swan.im/hostbill-solusvm-disaster/</id>
+    <published>2014-06-10T10:52:16.000Z</published>
+    <updated>2014-06-10T10:52:37.000Z</updated>
+    <content type="html"><![CDATA[<p>想吐槽这两货已经很久了，自从我去年很脑残的从 WHMCS、HostBill 里选了 HostBill 之后 …</p>
+<p>嗯，噩梦就开始了。</p>
+<p>首先是支付宝插件整合的问题，HostBill 官方的支付宝插件不能用。</p>
+<p>为什么呢？日志里没提呀，嗯那我逆向工程看看吧 …于是我逆向工程发现了一个 Typo 然后感觉整体代码都写的太烂了于是重写了一个。</p>
+<p>好的接下来我们需要把 SolusVM 整合进去，(⊙o⊙)… 听起来很简单是吧？</p>
+<p>你错了，HostBill 的面向 Bug 编程真是深得我的真传，SolusVM Rebuild 的话会把 HostBill 数据库里的 Root 密码设置为 SolusVM 的登录密码。然后作为一个逆向工程爱好者我又一次看了它的源码，嗯 … 对不起我没找到在哪儿改的。</p>
+<p>那，我去 SolusVM 看看文档自己发请求看看是哪个傻逼了吧。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">aveline<span class="annotation">@web</span>-<span class="string">a:</span>~$ curl --insecure -i --data <span class="string">"id=$SOLUSVM_ACCESS_ID&amp;key=$SOLUSVM_ACCESS_KEY&amp;action=vserver-rebuild&amp;template=linux-debian-7.3.0-x86-min-gen2-v1&amp;vserverid=7&amp;async=false&amp;rdtype=json"</span> <span class="string">https:</span><span class="comment">//master.solusvm.internal:5656/api/admin/command.php &amp;&amp; echo</span></span><br><span class="line">HTTP/<span class="number">1.1</span> <span class="number">200</span> OK</span><br><span class="line">Content-<span class="string">type:</span> text/html</span><br><span class="line">Transfer-<span class="string">Encoding:</span> chunked</span><br><span class="line"><span class="string">Date:</span> Tue, <span class="number">10</span> Jun <span class="number">2014</span> <span class="number">18</span>:<span class="number">26</span>:<span class="number">27</span> GMT</span><br><span class="line"><span class="string">Server:</span> SolusVM</span><br><span class="line"></span><br><span class="line">&#123;<span class="string">"status"</span>:<span class="string">"success"</span>,<span class="string">"statusmsg"</span>:<span class="string">"Virtual server is being rebuilt"</span>,<span class="string">"rootpassword"</span>:<span class="string">"5iuan90U"</span>,<span class="string">"information"</span>:<span class="string">""</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>然后等 VM 重装完了用这个密码登录上去果然可以，诶等等等等，登录上去之后，为毛还是 Ubuntu？！</p>
+<p>看日志也别想了，没有的。有的也都显示是 <strong>Success</strong> 或者 <strong>Complete</strong>，和没有一样的。</p>
+<p>看源码也别想了，这货代码不好好写，代码混淆倒是做的挺好，估计是写太烂不想给人看吧。</p>
+<p>嗯，吐槽完毕。准备自己写 Billing Portal + 换 OpenStack（</p>
+<p>好啦还是去写个 workaround 吧。叹气。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>想吐槽这两货已经很久了，自从我去年很脑残的从 WHMCS、HostBill 里选了 HostBill 之后 …</p>
+<p>嗯，噩梦就开始了。</p>
+<p>首先是支付宝插件整合的问题，HostBill 官方的支付宝插件不能用。</p>
+<p>为什么呢？日志里没提呀，嗯那]]>
+    </summary>
+    
+  </entry>
   
-  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+  <entry>
+    <title><![CDATA[HostBill 支付宝模块更新]]></title>
+    <link href="https://blog.swan.im/hostbill-alipay-14/"/>
+    <id>https://blog.swan.im/hostbill-alipay-14/</id>
+    <published>2014-06-08T00:40:43.000Z</published>
+    <updated>2014-06-08T00:41:25.000Z</updated>
+    <content type="html"><![CDATA[<p>这次更新的主要内容有：</p>
+<ul>
+<li>不再使用和原有模块相同的文件名，避免被覆盖</li>
+<li>增加命名空间选项，防止共用商户时出现订单号重复导致无法支付的情况</li>
+</ul>
+<p><a href="https://github.com/ym/alipay-hostbill/archive/1.4.zip" target="_blank" rel="external">戳这里下载</a></p>
+<p>下载后解压到 HostBill 安装目录的 <strong>includes/modules/Payment</strong> 文件夹下，记得把 <strong>alipay-hostbill-1.4</strong> 重命名成 <strong>alipay2</strong>。</p>
+<p>另外由于模块名称变了，安装之后需要重新激活，新的模块名称是 <strong>Alipay2</strong>。</p>
+<p>呃如果觉得我描述的还有问题的话，复制以下命令执行就好啦：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="regexp">/var/</span>www/hostbill # 请替换成自己的 HostBill 安装目录</span><br><span class="line">cd includes<span class="regexp">/modules/</span>Payment</span><br><span class="line">wget <span class="string">https:</span><span class="comment">//github.com/ym/alipay-hostbill/archive/1.4.tar.gz</span></span><br><span class="line">tar zxvf <span class="number">1.4</span>.tar.gz</span><br><span class="line">mv alipay-hostbill-<span class="number">1.4</span> alipay2</span><br></pre></td></tr></table></figure>
+<p><img src="/content/images/2014/Jun/QQ20140608-1.png" alt=""></p>
+<p>好像有同学不知道这里怎么填 … 嗯解释一下吧：</p>
+<p>服务类型这里：</p>
+<ul>
+<li>create_direct_pay_by_user 是即时到账交易接口</li>
+<li>trade_create_by_buyer 是双接口</li>
+<li>create_partner_trade_by_buyer 纯担保交易接口</li>
+</ul>
+<p>然后代理商 ID 空着就行了。</p>
+<p>如果有多个 HostBill 共用同一个支付宝账号的话，命名空间这里需要写一下名字，另外这里写了之后最好就不要再修改了，修改的话会导致用户还没支付的订单无法正确验证。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这次更新的主要内容有：</p>
+<ul>
+<li>不再使用和原有模块相同的文件名，避免被覆盖</li>
+<li>增加命名空间选项，防止共用商户时出现订单号重复导致无法支付的情况</li>
+</ul>
+<p><a href="https://github.com/ym/ali]]>
+    </summary>
+    
+      <category term="- HostBill
+- 支付宝" scheme="https://blog.swan.im/tags/HostBill-%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[HostBill 支付宝模块]]></title>
+    <link href="https://blog.swan.im/hostbill-alipay-module/"/>
+    <id>https://blog.swan.im/hostbill-alipay-module/</id>
+    <published>2014-04-07T01:19:00.000Z</published>
+    <updated>2014-06-08T00:44:25.000Z</updated>
+    <content type="html"><![CDATA[<p>最近一阵子在搭建某 IDC 的客户与支持系统，由于 WHMCS 烂泥扶不上墙，所以我就选用了高大上的 HostBill。<br>（几乎免费的和一次性要付 999 刀的东西能比嘛</p>
+<p>啊，当然呢，HostBill 也有很多不好的地方吖，比如这个自带的支付宝模块，就死活用不了，支付是没问题，但是回调啊总是 Failure。</p>
+<p>找客服呢自然是没用的，为什么呢？我买了已经超过 30 天了，人家要额外收钱了而且还不一定能解决。</p>
+<p>那只能自己来咯，首先付掉 2.50 EUR 在 <a href="http://easytoyou.eu" target="_blank" rel="external">http://easytoyou.eu</a> 买个一天的 ionCube Decoder。</p>
+<p>然后解密以下文件：</p>
+<ul>
+<li>/includes/modules/Payment/class.alipay.php</li>
+<li>/includes/modules/Payment/callback/alipay_return.php</li>
+<li>/includes/modules/Payment/callback/alipay_callback.php</li>
+</ul>
+<p>解密之后我发现调用模块居然是这样做的：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'cmd'</span>] = <span class="string">'callback'</span>;</span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'module'</span>] = <span class="string">'alipay'</span>;</span><br><span class="line"><span class="variable">$_GET</span>[<span class="string">'ali_type_r'</span>] = <span class="string">'callbak'</span>;</span><br><span class="line">error_reporting( <span class="number">0</span> );</span><br><span class="line">session_name( <span class="string">'SESSID'</span> . substr( md5( <span class="variable">$_SERVER</span>[<span class="string">'SERVER_NAME'</span>] ), -<span class="number">4</span> ) );</span><br><span class="line">session_start(  );</span><br><span class="line"><span class="keyword">include</span>( <span class="string">'../../../../hbf/bootstrap.php'</span> );</span><br><span class="line">FrontController::init( <span class="string">'module'</span> );</span><br></pre></td></tr></table></figure></p>
+<p><strong>你！能！想！象！调！用！模！块！居！然！用！$_GET！来！传！参！数！吗！</strong><br><strong>反！正！我！不！能！</strong></p>
+<p>好吧其实出错的原因呢和这儿关系不是很大，当然这么写肯定是不守<del>妇道</del>的！</p>
+<p>这里用的是 <code>$_GET[&#39;ali_type_r&#39;]</code>，但是在 <strong>class.alipay.php</strong> 里面却检查的是 <code>$_REQUEST[&#39;ali_type_r&#39;]</code>，尼这是自己山寨的 <code>$_GET</code> 内容当然不会出现在 <code>$_REQUEST</code> 里啦！baka！</p>
+<p>然后这里特么的你写的是 <code>callbak</code> 啊！睁大眼睛看看是不是少了一个 <code>c</code>！</p>
+<p>另外就是支付宝 return 的验证接口需要把 <code>$_GET</code> 里的所有内容做一个 chksum，然后，嗯，我想是个人都能想清楚了：<br><code>$_GET[&#39;cmd&#39;]</code>、<code>$_GET[&#39;module&#39;]</code> 和 <code>$_GET[&#39;ali_type_r&#39;]</code> 混进来之后 chksum 肯定会不一样的啦~</p>
+<p>既然问题都知道了，那么就好解决了。</p>
+<p>不过呢，作为蛋疼党，窝比较喜欢重写而不是修 Bug … 加起来连 500 行都不到嘛！（撸袖子</p>
+<p>以及自带的模块用的还是老版本的支付宝接口，窝参考支付宝官方的 PHP 栗子更新了下。</p>
+<p>嗯，以下是窝重写之后的代码，已经扔在 GitHub 上了喵~<br><a href="https://github.com/ym/alipay-hostbill" target="_blank" rel="external">https://github.com/ym/alipay-hostbill</a></p>
+<p>下载之后扔在 <strong>includes/modules/Payment</strong> 目录覆盖原有文件即可。<br>我在 PHP 5.5 下测试过是木有问题的，其他版本有问题可能性也不大，因为这次比较收敛，没有怎么用新特性。<br>如果有问题的话，欢迎在 <a href="https://github.com/ym/alipay-hostbill/issues" target="_blank" rel="external">GitHub</a> 上给我发 Bug 报告或者 Pull Request~</p>
+<p>啊最后感谢师姑陪我写代码还送我蛋糕次以及顺便吐槽下支付宝你的 PHP 栗子是临时工写的吗，<code>veryfy</code>、<code>isSgin</code> 这些是个什么玩意儿啊？！<br>再顺便吐槽下 <a href="https://plus.google.com/110748073762130717665/about" target="_blank" rel="external">1901 咖啡馆</a> 你家为什么没有一个能让我吃 / 喝的下去的玩意儿以及为何 Wi-Fi 如此之烂以至于我在四月份的第一天就用掉了 900 M 的 3G 流量，太讨厌了！！！<br>发这篇文章到 Twitter 的时候我又发现了一个槽点啊哈哈，Logdown 的 slug 生成居然把 <strong>支付宝</strong> 给翻译成了 <strong>PayPal</strong>，给跪了！</p>
+<p>哦，对了，刚才的蛋糕忘记上图了：</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/192835/VMDO0MOuQMen3dMlhoAD_IMG_1006.JPG" alt="IMG_1006.JPG"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近一阵子在搭建某 IDC 的客户与支持系统，由于 WHMCS 烂泥扶不上墙，所以我就选用了高大上的 HostBill。<br>（几乎免费的和一次性要付 999 刀的东西能比嘛</p>
+<p>啊，当然呢，HostBill 也有很多不好的地方吖，比如这个自带的支付宝模块，就死]]>
+    </summary>
+    
+      <category term="- HostBill
+- 支付宝" scheme="https://blog.swan.im/tags/HostBill-%E6%94%AF%E4%BB%98%E5%AE%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[去除讨厌的手机淘宝启动图]]></title>
+    <link href="https://blog.swan.im/remove-annoying-taobao-bootimg/"/>
+    <id>https://blog.swan.im/remove-annoying-taobao-bootimg/</id>
+    <published>2014-03-06T08:35:00.000Z</published>
+    <updated>2014-06-06T18:01:58.000Z</updated>
+    <content type="html"><![CDATA[<p>最近手机淘宝多了一个很讨厌的启动图，上面是一个笑的很脑残的人拿着手机的样子，每次早上在被窝里查快递的时候，我都会被丫的脑残笑恶寒的立刻就醒了。（你们看我最近起的这么早不是没有原因的！</p>
+<p>然后今天我终于忍不住了。</p>
+<p>使用神器 Charles 分析后可以发现，手机淘宝客户端启动的时候会请求这样一个 URL <code>www.taobao.com/go/rgn/taobao2013/bootimage.php</code>，里面内容就是启动图片的信息咯：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;"<span class="attribute">url</span>":<span class="value"><span class="string">"http:\/\/gtms02.alicdn.com\/tps\/i2\/T1Du9PFqtcXXbzlxAc-640-1136.png"</span></span>,"<span class="attribute">smallurl</span>":<span class="value"><span class="string">"http:\/\/gtms01.alicdn.com\/tps\/i1\/T1YceMFBNgXXXz0cAs-640-960.png"</span></span>,"<span class="attribute">starttime</span>":<span class="value"><span class="string">"2014-03-01 16:01:00"</span></span>,"<span class="attribute">endtime</span>":<span class="value"><span class="string">"2014-03-08 23:59:59"</span></span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>⊙﹏⊙b 一号就出来了这个图片我七号才忍无可忍你们看我的耐心是多么好呀~ 忍了差不多有七天呢~</p>
+<p>然后大家都知道怎么做了，我家里的网络使用的 DNS 是我用 DNSMasq 自建的，把 <code>www.taobao.com</code> 指向到我本地的 nginx 反向代理即可，反向代理配置如下：</p>
+<figure class="highlight nginxconf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">	<span class="title">server_name</span> www.taobao.com;</span><br><span class="line"></span><br><span class="line">	<span class="title">location</span> = /go/rgn/taobao2013/bootimage.php &#123;</span><br><span class="line">		<span class="title">return</span> <span class="number">403</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="title">location</span> / &#123;</span><br><span class="line">		<span class="title">proxy_pass</span> <span class="url">http://www.taobao.com</span>;</span><br><span class="line">		<span class="title">proxy_set_header</span> X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后重启手机淘宝客户端，啊，一切都清净了，再也没有讨厌的棒子男人出现了！</p>
+<p><strong>最后，我就是觉得李敏镐没有洛阳铲好看你们这群棒子粉不服来咬我啊！</strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近手机淘宝多了一个很讨厌的启动图，上面是一个笑的很脑残的人拿着手机的样子，每次早上在被窝里查快递的时候，我都会被丫的脑残笑恶寒的立刻就醒了。（你们看我最近起的这么早不是没有原因的！</p>
+<p>然后今天我终于忍不住了。</p>
+<p>使用神器 Charles 分析后可以]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Docker Linode 部署笔记]]></title>
+    <link href="https://blog.swan.im/docker-linode-deployment-notes/"/>
+    <id>https://blog.swan.im/docker-linode-deployment-notes/</id>
+    <published>2014-02-20T02:36:00.000Z</published>
+    <updated>2014-06-06T18:03:47.000Z</updated>
+    <content type="html"><![CDATA[<p>运行环境为 Ubuntu 12.04 LTS 64bit，Docker 0.8.0。<br>在开始之前，建议部署一个全新的 Linode 来进行操作以防止历史遗留的配置造成意外 :-D</p>
+<p>咳咳，以下运行的命令都是以 <strong>root</strong> 身份运行的，我比较懒喜欢直接 <code>sudo -s</code>，不过这不是一个好的习惯各位不要学习啊哈哈~</p>
+<ol>
+<li><p>更新系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get upgrade</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>替换内核和 GRUB</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get install linux-virtual grub-legacy-ec2</span><br><span class="line">apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑 <code>/boot/grub/menu.lst</code>，找到</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># defoptions=console=hvc0</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>在后面加上 <code>rootflags=nobarrier</code>，注意 <strong>不要</strong> 取消这行的注释<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># defoptions=console=hvc0 rootflags=nobarrier</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>编辑 <code>/etc/default/grub</code>，找到<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">GRUB_CMDLINE_LINUX=<span class="value"><span class="string">""</span></span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>里面加上 <code>cgroup_enable=memory swapaccount=1</code><br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">GRUB_CMDLINE_LINUX=<span class="value"><span class="string">"cgroup_enable=memory swapaccount=1"</span></span></span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p>重新生成 <code>/boot/grub/menu.lst</code></p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span>-grub-legacy-ec2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改 Linode Profile<br><br>将 <strong>Boot Settings</strong> 里的 <strong>Kernel</strong> 修改为 <code>pv-grub-x86_64</code>，<br>然后取消勾选 <strong>Filesystem/Boot Helpers</strong> 里的 <strong>Xenify Distro</strong>，保存，然后重启。<br>重启之后 <code>uname -r</code> 即可看到当前内核版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root@linode-x1:~<span class="comment"># uname -r</span></span><br><span class="line"><span class="number">3.8</span>.<span class="number">0</span>-<span class="number">35</span>-generic</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 Docker<br><br>嘛，这里说过了就不说了，可以翻阅之前写的 <a href="http://blog.swan.im/posts/178233-docker-concise-deployment-tutorials">Docker 简明部署教程</a> 或者官方文档 <a href="http://docs.docker.io/en/latest/installation/ubuntulinux/" target="_blank" rel="external">Installation on Ubuntu - Docker Documentation</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="number">36</span>A1D7869245C8950F966E92D8576A8BA88D21E9</span><br><span class="line">sh -c <span class="string">"echo deb http://get.docker.io/ubuntu docker main\</span><br><span class="line">&gt; /etc/apt/sources.list.d/docker.list"</span></span><br><span class="line">apt-get update</span><br><span class="line">apt-get install -y lxc-docker</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>装完之后可以 <code>docker info</code> 看一下～是不是很完美呐～<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root<span class="annotation">@linode</span>-<span class="string">x1:</span>~# docker info</span><br><span class="line"><span class="string">Containers:</span> <span class="number">5</span></span><br><span class="line"><span class="string">Images:</span> <span class="number">106</span></span><br><span class="line"><span class="string">Driver:</span> aufs</span><br><span class="line"> Root <span class="string">Dir:</span> <span class="regexp">/var/</span>lib<span class="regexp">/docker/</span>aufs</span><br><span class="line"><span class="label"> Dirs:</span> <span class="number">116</span></span><br></pre></td></tr></table></figure></p>
+<p>最后抱怨一下 Markdown 其实没那么好用，幸好还能往里加 HTML :-(<br>以及 AppEx 什么时候支持 3.8 的内核啊魂淡前面加一台 3.2 内核的 Linode 跑它很贵的好吗一个月 20 刀呢！（果然人穷就是尼玛事儿多</p>
+<p>参考文章:</p>
+<ol>
+<li><a href="https://www.linode.com/wiki/index.php/PV-GRUB" target="_blank" rel="external">PV-GRUB - LinodeWiki</a></li>
+<li><a href="http://docs.docker.io/en/latest/installation/ubuntulinux/" target="_blank" rel="external">Installation on Ubuntu - Docker Documentation</a></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>运行环境为 Ubuntu 12.04 LTS 64bit，Docker 0.8.0。<br>在开始之前，建议部署一个全新的 Linode 来进行操作以防止历史遗留的配置造成意外 :-D</p>
+<p>咳咳，以下运行的命令都是以 <strong>root</strong> 身]]>
+    </summary>
+    
+      <category term="- ubuntu
+- docker
+- Linode" scheme="https://blog.swan.im/tags/ubuntu-docker-Linode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用 Runkit 实现简易的 PHP 后门检测]]></title>
+    <link href="https://blog.swan.im/shi-yong-runkit-shi-xian-jian-yi-de-php-hou-men-jian-ce/"/>
+    <id>https://blog.swan.im/shi-yong-runkit-shi-xian-jian-yi-de-php-hou-men-jian-ce/</id>
+    <published>2014-02-13T19:34:00.000Z</published>
+    <updated>2014-06-06T17:06:02.000Z</updated>
+    <content type="html"><![CDATA[<p>这是今天在帮某大检查他被黑的机器的时候想出的歪门邪道。<br>原理很简单，就是把 PHP 原有的函数改名，然后用自己的函数替换掉那个原来的函数。</p>
+<p>啊，首先呢，你必须要有 root 权限~ 用虚拟主机的同学们请自觉做鸟兽散。</p>
+<p>Runkit 在 <a href="http://pecl.php.net/package/runkit" target="_blank" rel="external">PECL</a> 的版本非常老，最新的版本居然是 2006-06-06 年的。<br>当然老没有关系，有些发行版就喜欢用老的东西，以及大部分虚拟主机用户还喜欢用 PHP 5.2 甚至更老的版本呢。不过这个例外，由于版本太老了所以连在 PHP 5.2 上都跑不了，所以我们要去 GitHub 上下最新的开发分支。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /tmp</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/zenovich/runkit.git</span><br><span class="line"><span class="built_in">cd</span> runkit</span><br><span class="line">phpize</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>然后在 <strong>php.ini</strong> 里加上相关条目：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[runkit]</span><br><span class="line">extension="runkit.so"</span><br><span class="line">runkit.internal_override = On</span><br></pre></td></tr></table></figure></p>
+<p>找不到 <strong>php.ini</strong> 在哪儿的，请在 Web 目录下放置如下文件，然后用浏览器打开就能看到咯：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> php_ini_loaded_file();</span><br></pre></td></tr></table></figure></p>
+<p>当然呢，对于蛋疼的 DirectAdmin 用户，我们还需要在 <strong>php.ini</strong> 里把 <strong>extension_dir</strong> 修改为 <code>/usr/local/bin/php-config --extension-dir</code> 所显示的目录才行。</p>
+<p>然后找个地方放下这个文件，我是放在了 <code>/usr/local/lib/php/security.php</code>，下文也以此为例子。<br>注意的是：</p>
+<pre><code>1. 必须去掉这个文件的写权限，不怕死的可以不去掉。
+2. 开启了 <span class="keyword">*</span><span class="keyword">*</span>open_basedir<span class="keyword">*</span><span class="keyword">*</span> 选项的，这个文件需要放置在 <span class="keyword">*</span><span class="keyword">*</span>open_basedir<span class="keyword">*</span><span class="keyword">*</span> 里面所列出的目录里，不然会出错。
+3. 请把 `/tmp` 换成其他可写的日志目录，或者换成 syslog 什么的。
+</code></pre><script src="https://gist.github.com/ym/f00dba163f81873f4619.js"></script>
 
-
-</body>
-</html>
+<p>再修改 <strong>php.ini</strong>，找到 <code>auto_prepend_file</code> 这行，改为：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">auto_prepend_file = <span class="value">/usr/local/lib/php/security.php</span></span></span><br></pre></td></tr></table></figure></p>
+<p>最后重启 apache 进程即可看到效果啦~ 日志是介个样子的<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">================</span><br><span class="line">URI 			= /login.php</span><br><span class="line">Client 		= <span class="number">125.33</span>.92.240</span><br><span class="line">Header 		= <span class="string">Location:</span> index.php</span><br><span class="line">Backtrace = <span class="regexp">/home/</span>xxxxxx<span class="regexp">/domains/</span>xxxxxx.net<span class="regexp">/public_html/</span>global.<span class="string">php:</span><span class="number">354</span>:header</span><br><span class="line">            <span class="regexp">/home/</span>xxxxxx<span class="regexp">/domains/</span>xxxxxx.net<span class="regexp">/public_html/</span>login.<span class="string">php:</span><span class="number">45</span>:ObHeader</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这是今天在帮某大检查他被黑的机器的时候想出的歪门邪道。<br>原理很简单，就是把 PHP 原有的函数改名，然后用自己的函数替换掉那个原来的函数。</p>
+<p>啊，首先呢，你必须要有 root 权限~ 用虚拟主机的同学们请自觉做鸟兽散。</p>
+<p>Runkit 在 <a]]>
+    </summary>
+    
+      <category term="- PHP" scheme="https://blog.swan.im/tags/PHP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Docker 简明部署教程]]></title>
+    <link href="https://blog.swan.im/docker-deployment-notes/"/>
+    <id>https://blog.swan.im/docker-deployment-notes/</id>
+    <published>2014-02-07T14:29:00.000Z</published>
+    <updated>2014-06-06T17:06:39.000Z</updated>
+    <content type="html"><![CDATA[<p>喵，首先需要准备一个干净的 Ubuntu 12.04 LTS 环境。<br>Tips: 如果使用 VPS 的话推荐使用基于 KVM / VMWare 虚拟化的，如果是 OpenVZ 什么的就算了… 洗洗睡吧</p>
+<h2 id="安装_Docker">安装 Docker</h2><p>首先需要升级内核，由于 Precise 默认提供的 3.2 内核里 LXC 的支持有点问题，所以我们需要升级到 3.8：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y linux-image-generic-lts-raring linux-headers-generic-lts-raring</span><br></pre></td></tr></table></figure></p>
+<p>升级完成后重启一下，让内核生效：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot</span><br></pre></td></tr></table></figure></p>
+<p>然后导入 Docker 的 Key 并安装之：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <span class="number">36</span>A1D7869245C8950F966E92D8576A8BA88D21E9</span><br><span class="line">sudo sh -c <span class="string">"echo deb http://get.docker.io/ubuntu docker main\</span><br><span class="line">&gt; /etc/apt/sources.list.d/docker.list"</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y lxc-docker</span><br></pre></td></tr></table></figure></p>
+<h2 id="准备基础镜像">准备基础镜像</h2><p>接下来我们需要准备一个基础镜像，对于我等 Debian 脑残粉，嗯下面的基础镜像就以 Debian 7 Wheezy 为例子啦～</p>
+<p>当然，你也可以直接用 <code>docker pull debian</code> 从官方 registry 下载，但是 Cloudflare 在国内的可用性实在是太烂了，还是自己做算了。</p>
+<p>制作镜像需要用到 <code>debootstrap</code> 这个包，我们先安装一下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install -y debootstrap</span><br></pre></td></tr></table></figure></p>
+<p>然后生成一只 Debian：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">debootstrap wheezy debian-wheezy http://mirrors.espresso.li/debian</span><br></pre></td></tr></table></figure></p>
+<p>嗯注意请把 <code>http://mirrors.espresso.li/debian</code> 换成你所使用的 Debian 源的地址，上面写的这个源是不对外开放的喵</p>
+<p>接下来我们把它导入 Docker：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -C debian-wheezy -c . | sudo docker import - espresso/debian</span><br></pre></td></tr></table></figure></p>
+<p>嗯好了接下来你们自己玩儿吧我上班去了。。。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>喵，首先需要准备一个干净的 Ubuntu 12.04 LTS 环境。<br>Tips: 如果使用 VPS 的话推荐使用基于 KVM / VMWare 虚拟化的，如果是 OpenVZ 什么的就算了… 洗洗睡吧</p>
+<h2 id="安装_Docker">安装 Docker<]]>
+    </summary>
+    
+      <category term="- docker
+- ubuntu
+- Ubuntu" scheme="https://blog.swan.im/tags/docker-ubuntu-Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[解決 EdgeRouter 雙 WAN 時某一出口無法正常 NAT 的問題]]></title>
+    <link href="https://blog.swan.im/jie-jue-edgerouter-shuang-wan-shi-mou-chu-kou-wu-fa-zheng-chang-nat-de-wen-ti/"/>
+    <id>https://blog.swan.im/jie-jue-edgerouter-shuang-wan-shi-mou-chu-kou-wu-fa-zheng-chang-nat-de-wen-ti/</id>
+    <published>2013-12-13T06:36:00.000Z</published>
+    <updated>2014-06-06T17:04:34.000Z</updated>
+    <content type="html"><![CDATA[<p>前幾天在路由器上跑 mtr 把 ssh 跑死了，由於沒接 Console 的線我也不知道為什麼所以乾脆重啟了一下。</p>
+<p>然後，我聯通出口的 NAT 掛掉了。 :-(</p>
+<p>我的網絡架構是這樣子的：</p>
+<blockquote>
+<p>接入層 EdgeRouter Lite：</p>
+<ul>
+<li>eth0 接入到室內交換機</li>
+<li>eth1 上聯公用 TP-LINK 路由器，使用 DHCP 接入長城寬帶</li>
+<li>eth2 上聯聯通 EPON 終端設備，通過 PPPoE 接入聯通寬帶</li>
+</ul>
+</blockquote>
+<p>重啟之後由於 eth1 的 DHCP 先獲取到了 IP 地址，系統的默認路由就變成了 eth1。</p>
+<p>於是後來 eth2 上連接的 PPPoE 連接完成後沒有修改默認路由，NAT 自然不知道把數據往哪裡扔了，所以… 解決辦法很簡單咯：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ip route replace default via pppoe0</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前幾天在路由器上跑 mtr 把 ssh 跑死了，由於沒接 Console 的線我也不知道為什麼所以乾脆重啟了一下。</p>
+<p>然後，我聯通出口的 NAT 掛掉了。 :-(</p>
+<p>我的網絡架構是這樣子的：</p>
+<blockquote>
+<p>接入層 EdgeR]]>
+    </summary>
+    
+      <category term="- EdgeRouter" scheme="https://blog.swan.im/tags/EdgeRouter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[搭建 Exim4 來去除 Google Apps 發送郵件時提示以某某的身份發送的問題]]></title>
+    <link href="https://blog.swan.im/use-exim4-to/"/>
+    <id>https://blog.swan.im/use-exim4-to/</id>
+    <published>2013-11-26T10:47:00.000Z</published>
+    <updated>2015-02-14T15:40:12.000Z</updated>
+    <content type="html"><![CDATA[<p>之前為了防止各個服務商沒事兒洩漏我 E-mail 地址，我每次註冊服務時填寫的註冊郵箱地址都是 <strong>provider-name@xswan.net</strong> 這種形式的，本來這樣沒什麼問題，但是 … 要回覆的時候問題就來了。</p>
+<p>首先我們把這個郵箱添加到 <strong>Send mail as</strong> 裡去，然後 … 嗯發郵件的時候，就會出現這樣討厭的提示了：</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/162913/BpNfnWLS0ei6sZypM6sx_06$TKM1B6LFD8R2O~_NXFYY.jpg" alt="06$TKM1B6LFD8R2O~_NXFYY.jpg"></p>
+<p>在 Google Apps 的後臺找了半天也沒發現能重寫 Envelope-From 這個頭的地方，那就搭建一個 Exim4 好啦～</p>
+<p>這裡我使用的是 <a href="https://www.digitalocean.com/?refcode=6034af1bc1c8" target="_blank" rel="external">DigitalOcean</a> 的 VPS 來搭建 Exim4，主要原因是：</p>
+<ol>
+<li>可以設置 PTR，郵件服務器不做反向解析的話到達率可是很低的喲</li>
+<li>性價比高，5 USD 還 SSD 你到哪兒找去（LowEndBox 什麼的地方除外）</li>
+</ol>
+<p>操作系統我使用的是 Debian 7 x64，安裝步驟如下：</p>
+<p><strong>1.</strong> 安裝 Exim4<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get -y upgrade</span><br><span class="line">apt-get -y install mailutils exim4-daemon-light</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.</strong> 配置 Exim4<br>把以下內容覆蓋到 <code>/etc/exim4/update-exim4.conf.conf</code> 然後運行 <code>dpkg-reconfigure exim4</code> 一路 Next 即可：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="setting">dc_eximconfig_configtype=<span class="value">'internet'</span></span></span><br><span class="line"><span class="setting">dc_other_hostnames=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_local_interfaces=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_readhost=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_relay_domains=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_minimaldns=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_relay_nets=<span class="value">'<span class="number">216.239</span>.<span class="number">32.0</span>/<span class="number">19</span>;<span class="number">64.233</span>.<span class="number">160.0</span>/<span class="number">19</span>;<span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span>;<span class="number">72.14</span>.<span class="number">192.0</span>/<span class="number">18</span>;<span class="number">209.85</span>.<span class="number">128.0</span>/<span class="number">17</span>;<span class="number">66.102</span>.<span class="number">0.0</span>/<span class="number">20</span>;<span class="number">74.125</span>.<span class="number">0.0</span>/<span class="number">16</span>;<span class="number">64.18</span>.<span class="number">0.0</span>/<span class="number">20</span>;<span class="number">207.126</span>.<span class="number">144.0</span>/<span class="number">20</span>;<span class="number">173.194</span>.<span class="number">0.0</span>/<span class="number">16</span>'</span></span></span><br><span class="line"><span class="setting">dc_smarthost=<span class="value">''</span></span></span><br><span class="line"><span class="setting">CFILEMODE=<span class="value">'<span class="number">644</span>'</span></span></span><br><span class="line"><span class="setting">dc_use_split_config=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_hide_mailname=<span class="value">''</span></span></span><br><span class="line"><span class="setting">dc_mailname_in_oh=<span class="value">'<span class="keyword">true</span>'</span></span></span><br><span class="line"><span class="setting">dc_localdelivery=<span class="value">'mail_spool'</span></span></span><br></pre></td></tr></table></figure></p>
+<p>上面的 <strong>dc_relay_nets</strong> 裡是 Google 的 IP 段，獲取方法在 <a href="https://support.google.com/a/answer/60764?hl=en" target="_blank" rel="external">這裡</a>。</p>
+<p><strong>3.</strong> 配置 Exim4 重寫規則<br>將以下內容寫入 <code>/etc/exim4/conf.d/rewrite/32\_exim4-rewrite-envelope-from</code>：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a@loli<span class="class">.vg</span> <span class="variable">$h_from</span> F</span><br></pre></td></tr></table></figure></p>
+<p><code>a@loli.vg</code> 是我的郵箱地址，實際操作中請按換成自己的嗯。。</p>
+<p>修改完成後重啟 exim4:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">invoke-rc.d exim4 restart</span><br></pre></td></tr></table></figure></p>
+<p><strong>4.</strong> 安全加固<br>其實就是用 iptables 把來自非 Google 的 IP 屏蔽掉而已，雖然第二步的 <strong>dc_relay_nets</strong> 已經處理了，但是我覺得拒絕投遞的日誌出現也很煩，那就在 iptables 裡再屏蔽一次好了 :-)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">216.239</span>.<span class="number">32.0</span>/<span class="number">19</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">64.233</span>.<span class="number">160.0</span>/<span class="number">19</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">72.14</span>.<span class="number">192.0</span>/<span class="number">18</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">209.85</span>.<span class="number">128.0</span>/<span class="number">17</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.102</span>.<span class="number">0.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">74.125</span>.<span class="number">0.0</span>/<span class="number">16</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">66.249</span>.<span class="number">80.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">207.126</span>.<span class="number">144.0</span>/<span class="number">20</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT <span class="operator">-s</span> <span class="number">173.194</span>.<span class="number">0.0</span>/<span class="number">16</span> -p tcp -m tcp --dport <span class="number">25</span> -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp -m tcp --dport <span class="number">25</span> -j DROP</span><br></pre></td></tr></table></figure></p>
+<p><strong>5.</strong> 修改域名 A 記錄和 SPF 記錄<br>首先添加一條 <strong>_spf.moease.org</strong>，記錄類型為 SPF（沒有 SPF 的選 TXT)：<br><code>&quot;v=spf1 a:mx1.moease.org ip4:198.211.101.101 ?all&quot;</code></p>
+<p>這裡的 <strong>mx1.moease.org</strong> 就是我運行 Exim4 的機器的 Hostname，<em>198.211.101.101</em> 是它的 IP 地址。</p>
+<p>然後將 <strong>moease.org</strong> 的 SPF 記錄修改為：<br><code>&quot;v=spf1 include:_spf.moease.org include:_spf.google.com -all&quot;</code></p>
+<p>關於 SPF 記錄的更多知識可以在<a href="https://wzyboy.im/post/865.html" target="_blank" rel="external">小允的 Blog</a> 裡找到，這裡就不再敘述了。</p>
+<p><strong>6.</strong> 修改 Google Apps 郵件發送設置<br>打開 Google Apps 控制面板，依次打開：<br>Google Apps &gt; Gmail &gt; Advanced Settings</p>
+<p>在打開的頁面裡找到 Outbound gateway，填上郵件服務器的地址保存即可，我這裡填寫的是 <code>mx1.moease.org</code>。<br>（沒有的請先升級到付費版本）</p>
+<p>好啦，完結撒花～</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>之前為了防止各個服務商沒事兒洩漏我 E-mail 地址，我每次註冊服務時填寫的註冊郵箱地址都是 <strong>provider-name@xswan.net</strong> 這種形式的，本來這樣沒什麼問題，但是 … 要回覆的時候問題就來了。</p>
+<p>首先我們把這個]]>
+    </summary>
+    
+      <category term="- debian
+- Google Apps
+- Exim
+- Gmail
+- Debian" scheme="https://blog.swan.im/tags/debian-Google-Apps-Exim-Gmail-Debian/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CSS 实现图片等比缩放]]></title>
+    <link href="https://blog.swan.im/css-image-scale/"/>
+    <id>https://blog.swan.im/css-image-scale/</id>
+    <published>2013-09-02T07:09:00.000Z</published>
+    <updated>2014-06-06T17:09:38.000Z</updated>
+    <content type="html"><![CDATA[<p>嗯因为客户的站点编辑内容的时候上传的图片部分没有缩放，所以得在 CSS 上处理一下。</p>
+<p>直接上代码咯。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.content</span> <span class="tag">img</span><span class="class">.full-width</span> <span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">max-width</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">max-height</span>:<span class="value"> <span class="number">100%</span></span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">width</span>:<span class="value"> auto</span></span>;</span><br><span class="line">	<span class="rule"><span class="attribute">height</span>:<span class="value"> auto</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>非 IE6 下工作正常，不过这种老掉牙的浏览器就不要考虑它了。<br>（不过客户说还是要考虑的 … 望天 … 你在说神马 … 我不知道 IE6 是什么东西诶 …</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>嗯因为客户的站点编辑内容的时候上传的图片部分没有缩放，所以得在 CSS 上处理一下。</p>
+<p>直接上代码咯。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span clas]]>
+    </summary>
+    
+      <category term="- css
+- CSS" scheme="https://blog.swan.im/tags/css-CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[使用 Reprepro 构建自己的 APT 仓库]]></title>
+    <link href="https://blog.swan.im/shi-yong-reprepro-gou-jian-zi-ji-de-apt-cang-ku/"/>
+    <id>https://blog.swan.im/shi-yong-reprepro-gou-jian-zi-ji-de-apt-cang-ku/</id>
+    <published>2013-09-02T03:54:00.000Z</published>
+    <updated>2014-06-06T17:10:04.000Z</updated>
+    <content type="html"><![CDATA[<p>最近使用 Puppet 的过程中，发现用 dpkg 做 Package 的 Provider 时总是会在报告里留下 <code>ensure changed &#39;purged&#39; to &#39;present&#39;</code> 这样子的日志，即使这个包已经被安装过了还是如此。</p>
+<p>于是我的 Foreman 就被这样的日志强暴了三天。。。</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/99000/7yzg8uroT7WKkRfH8iBg_Snip20130903_16.png" alt="Snip20130903_16.png"></p>
+<p>问了下 Eric 酱，好像只能自建 APT 仓库了，Debian 官方的 Wiki 里有好多种建立 APT 仓库的工具。<br>这里我使用 <strong>reprepro</strong>，功能足够，设置简单，嗯，就它了。</p>
+<h2 id="安装_Reprepro">安装 Reprepro</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install -y reprepro</span><br></pre></td></tr></table></figure>
+<h2 id="配置_Reprepro">配置 Reprepro</h2><p>首先呢，创建一个文件夹来存放你的仓库咯，我放在 <em>/data/repo/</em> 这个目录。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /data/repo/conf</span><br></pre></td></tr></table></figure>
+<p>然后需要创建 <code>distributions</code> 这个文件用来标识发行版，我管理的机器主要有三个发行版，以下的内容按自己实际情况修改：</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Origin</span>: <span class="string">Aveline Swan</span></span><br><span class="line"><span class="attribute">Label</span>: <span class="string">aveline</span></span><br><span class="line"><span class="attribute">Suite</span>: <span class="string">precise</span></span><br><span class="line"><span class="attribute">Codename</span>: <span class="string">precise</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">12.04</span></span><br><span class="line"><span class="attribute">Architectures</span>: <span class="string">i386 amd64</span></span><br><span class="line"><span class="attribute">Components</span>: <span class="string">main</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">Packages for Aveline Swan</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">Origin</span>: <span class="string">Aveline Swan</span></span><br><span class="line"><span class="attribute">Label</span>: <span class="string">aveline</span></span><br><span class="line"><span class="attribute">Suite</span>: <span class="string">squeeze</span></span><br><span class="line"><span class="attribute">Codename</span>: <span class="string">squeeze</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">6.0</span></span><br><span class="line"><span class="attribute">Architectures</span>: <span class="string">i386 amd64</span></span><br><span class="line"><span class="attribute">Components</span>: <span class="string">main</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">Packages for Aveline Swan</span></span><br><span class="line"></span><br><span class="line"><span class="http"><span class="attribute">Origin</span>: <span class="string">Aveline Swan</span></span><br><span class="line"><span class="attribute">Label</span>: <span class="string">aveline</span></span><br><span class="line"><span class="attribute">Suite</span>: <span class="string">wheezy</span></span><br><span class="line"><span class="attribute">Codename</span>: <span class="string">wheezy</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">7.0</span></span><br><span class="line"><span class="attribute">Architectures</span>: <span class="string">i386 amd64</span></span><br><span class="line"><span class="attribute">Components</span>: <span class="string">main</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">Packages for Aveline Swan</span></span></span></span><br></pre></td></tr></table></figure>
+<h2 id="添加包">添加包</h2><p>在 <em>/data/repo</em> 这个目录执行 <code>reprepro includedeb 发行版 deb包位置</code> 命令添加既可。</p>
+<h2 id="设置_Web_服务">设置 Web 服务</h2><p>这里我直接使用了 <em>nginx</em>，配置文件如下：</p>
+<figure class="highlight nginxconf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">	<span class="title">listen</span> <span class="number">80</span>;</span><br><span class="line">	<span class="title">server_name</span> apt.swan.im;</span><br><span class="line"></span><br><span class="line">	<span class="title">location</span> / &#123;</span><br><span class="line">		<span class="title">root</span> /home/apt;</span><br><span class="line">		<span class="title">autoindex</span> <span class="built_in">on</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">  <span class="title">location</span> /conf &#123;</span><br><span class="line">		<span class="title">return</span> <span class="number">403</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="添加_APT_仓库到服务器">添加 APT 仓库到服务器</h2><p>在 Puppet Master 上执行 <code>puppet module install puppetlabs/apt</code> 安装 <strong>apt</strong> 模块。</p>
+<p>然后在 <em>site.pp</em> 里添加</p>
+<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">include</span> apt</span><br><span class="line"></span><br><span class="line"><span class="keyword">apt::source &#123;</span> <span class="string">'swan'</span>:</span><br><span class="line">  <span class="function">location   =&gt;</span> <span class="string">'http://apt.swan.im'</span>,</span><br><span class="line">  <span class="function">repos      =&gt;</span> <span class="string">'main'</span>,</span><br><span class="line">  <span class="function">include_src=&gt;</span> <span class="keyword">false</span></span><br><span class="line"><span class="keyword">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>如果你的仓库里不包含源码的话，记得要把 <em>include_src</em> 这个设置为 <code>false</code>，不然会报错。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近使用 Puppet 的过程中，发现用 dpkg 做 Package 的 Provider 时总是会在报告里留下 <code>ensure changed &#39;purged&#39; to &#39;present&#39;</code> 这样子的日志，即使这个包已]]>
+    </summary>
+    
+      <category term="- debian
+- Debian
+- Reprepro
+- APT" scheme="https://blog.swan.im/tags/debian-Debian-Reprepro-APT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[New DNS Service]]></title>
+    <link href="https://blog.swan.im/new-dns-service/"/>
+    <id>https://blog.swan.im/new-dns-service/</id>
+    <published>2013-08-11T04:56:00.000Z</published>
+    <updated>2014-06-06T17:10:35.000Z</updated>
+    <content type="html"><![CDATA[<p>一直有感於沒有足夠好用的 DNS 服務，於是自己寫了一個。</p>
+<p>DNSPod 免費版限制太多收費版還是不夠好玩兒，Amazon Route53 的 Latency-Based 記錄也如同雞肋，完全起不到 GeoIP 的作用，至於 Dyn … 呃好吧這家比較贊但是我還是喜歡自己折騰一下XD</p>
+<p>介紹一下架構：</p>
+<p>DNS 基於 PowerDNS + NodeJS + MySQL，一共用了 18 + 2 + 2 台 VPS，DNS 節點內存均爲 1G。</p>
+<p><del>其中 14 台是 AnyCast DNS，對外只用一個 IP，不過從監控來看好像只有幾個節點比較忙其他幾個都好冷清，感覺好浪費 :-(</del> <strong>使用率太低以及服務商響應速度不理想，已經下線</strong></p>
+<p>另外 4 台是 UniCast DNS。</p>
+<ul>
+<li>DigitalOcean <strong>San Francisco Datacenter</strong> (ns1)</li>
+<li>美團開放服務 <strong>北京數字北京機房</strong>(ns2)</li>
+<li>Nlayer <strong>Los Angeles Datacenter</strong> (ns3)</li>
+<li>ChinaCache <strong>北京順義海航機房</strong> (ns4)</li>
+</ul>
+<p>另外還有兩臺跑 Portal 和 API，和數據庫在同一個機房不過爲了保證被攻擊時被誤傷所以沒有放在同一臺機器上嗯。</p>
+<p>至於 GeoDNS，我使用的是 MaxMind 的 GeoLite 庫和由魔熊維護的 SinaIP 庫來解析地址。</p>
+<p>系統已經上線快一週了，運行正常，求壓力測試。</p>
+<p>貼一張狀態照。</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/84721/ZmHs6UgORg6d3JVunGbD_QQ20130812-1.png" alt="QQ20130812-1.png"></p>
+<p>吖，對了另外提供個小工具，可以通過 dig 來查詢自己的 IP 地址什麼的：<br>需要注意一下裏面的 TXT 記錄是用 <strong>Punycode</strong> 編碼過的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查詢 IP 地址</span></span><br><span class="line">dig ip.noquery A @ns1.noquery.net</span><br><span class="line"><span class="comment"># 查詢 IP 所屬組織</span></span><br><span class="line">dig organization.geoip.engine.noquery TXT @ns1.noquery.net</span><br><span class="line"><span class="comment"># 查詢 IP 所在城市信息</span></span><br><span class="line">dig city.geoip.engine.noquery TXT @ns1.noquery.net</span><br><span class="line"><span class="comment"># 查詢 IP 所在國家信息</span></span><br><span class="line">dig country.geoip.engine.noquery TXT @ns1.noquery.net</span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<p>一直有感於沒有足夠好用的 DNS 服務，於是自己寫了一個。</p>
+<p>DNSPod 免費版限制太多收費版還是不夠好玩兒，Amazon Route53 的 Latency-Based 記錄也如同雞肋，完全起不到 GeoIP 的作用，至於 Dyn … 呃好吧這家比較贊但是我]]>
+    </summary>
+    
+      <category term="- Default" scheme="https://blog.swan.im/tags/Default/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA['新浪气象站']]></title>
+    <link href="https://blog.swan.im/xin-lang-qi-xiang-zhan/"/>
+    <id>https://blog.swan.im/xin-lang-qi-xiang-zhan/</id>
+    <published>2013-07-13T12:30:00.000Z</published>
+    <updated>2013-07-13T12:30:00.000Z</updated>
+    <content type="html"><![CDATA[<p>前几天在鱼老师的微博里看到一条卖萌微博然后发现了这个好玩儿的东西，看着不算贵就入了俩。</p>
+<p>作为一个已经叛星的不折腾会死星人，拿个 Arduino 或者 Raspberry Pi 来自己做一个这种事我是再也不会做了，折腾下来的成本至少得 300 左右，不过这货只要 199 吖，果然量产的东西就是便宜。</p>
+<p>嘛，那就来个 … 开<del>箱</del>盒报告吧。</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/18937/wo6OY3lgSwasyToElP5J_2013-07-14 12.23.41 HDR.jpg" alt="2013-07-14 12.23.41 HDR.jpg"></p>
+<p>打开盒子从上到下从左到右依次是</p>
+<ul>
+<li>室内机电源线</li>
+<li>固定用螺丝和螺丝起子</li>
+<li>室外机</li>
+<li>室内机</li>
+<li>固定用 3M 双面胶带一块</li>
+</ul>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/18937/coXa7kvyQbJkexexVADg_2013-07-14 12.26.06 HDR.jpg" alt="2013-07-14 12.26.06 HDR.jpg"></p>
+<p>安装的话挺方便的，在 App Store 里下好新浪气象站的应用按着操作来就是了。</p>
+<p>设置 Wi-Fi 的时候会要求连接以 Sina- 开头的一个 Wi-Fi 热点，连上之后会弹出一个窗口要求设置 Wi-Fi，设置完了这个热点就会消失了，这里顺便吐槽下 Cisco 的家用路由器 (CVR100W) 真是烂到爆，居然 … 第一次用 Cisco 的热点连不上去，然后无奈之下用 TP-LINK (WR340G) 的热点连居然连上了。</p>
+<p>接下来是室外机，直接用附带的起子打开后盖拔出电池仓的压仓片就可以了，完成后室外机的 LCD 屏会有显示度数。</p>
+<p>安装室外机的时候遇到了点儿小麻烦，由于一时二逼直接把 3M 的双面胶贴墙上了，呃，准确的说是贴在了墙上的灰尘上，然后现在是用透明胶带贴在了空调室外机上，应该暂时掉不下来。 :-D</p>
+<p>嘛，这个就是新浪气象站的 App 啦。呃所需要注意的呢以下数据是<strong>非实时</strong>获取的，想要看实时数据呢得去室内机看。</p>
+<p>另外这里面的 PM 2.5 是从新浪天气获取的数据，不是室外机获取的。</p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/18937/MYobYVgyS3SKUFo1EsqI_2013-07-14 12.54.49.png" alt="2013-07-14 12.54.49.png"></p>
+<p><img src="http://user-image.logdown.io/user/950/blog/939/post/18937/IgIfZTQmisXCHK8scLNQ_2013-07-14 12.27.29 HDR.jpg" alt="2013-07-14 12.27.29 HDR.jpg"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>前几天在鱼老师的微博里看到一条卖萌微博然后发现了这个好玩儿的东西，看着不算贵就入了俩。</p>
+<p>作为一个已经叛星的不折腾会死星人，拿个 Arduino 或者 Raspberry Pi 来自己做一个这种事我是再也不会做了，折腾下来的成本至少得 300 左右，不过这货只要]]>
+    </summary>
+    
+      <category term="- Life
+- Life
+- Gadgets
+- Review" scheme="https://blog.swan.im/tags/Life-Life-Gadgets-Review/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[New DotDeb Mirror in China]]></title>
+    <link href="https://blog.swan.im/new-dotdeb-mirror-in-aliyun-china/"/>
+    <id>https://blog.swan.im/new-dotdeb-mirror-in-aliyun-china/</id>
+    <published>2013-07-11T12:07:00.000Z</published>
+    <updated>2014-06-06T17:11:18.000Z</updated>
+    <content type="html"><![CDATA[<p>I’ve just set up a mirror for DotDeb in China.</p>
+<p>Update Frequency: <strong>Once every day</strong></p>
+<p>URL: <a href="http://dotdeb.90g.org/" target="_blank" rel="external">http://dotdeb.90g.org/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I’ve just set up a mirror for DotDeb in China.</p>
+<p>Update Frequency: <strong>Once every day</strong></p>
+<p>URL: <a href="http://dotde]]>
+    </summary>
+    
+      <category term="- Dotdeb" scheme="https://blog.swan.im/tags/Dotdeb/"/>
+    
+  </entry>
+  
+</feed>

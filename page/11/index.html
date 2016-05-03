@@ -1,0 +1,614 @@
+<!doctype html>
+<html class="theme-next  theme-next-mist">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.3"/>
+
+
+
+
+  <meta name="keywords" content="Hexo,next" />
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Aveline's Blog" type="application/atom+xml" />
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.3" />
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mist',
+    analytics: {
+      google: 'UA-20336289-2'
+    },
+    sidebar: 'post'
+  };
+</script>
+
+
+
+
+  <title> Aveline's Blog </title>
+</head>
+
+<body>
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+
+  <div class="container one-column 
+   page-home 
+">
+    <div class="headband"></div>
+
+    <div id="header" class="header">
+      <div class="header-inner">
+        <h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand">
+      <span class="logo">
+        <i class="icon-logo"></i>
+      </span>
+      <span class="site-title">Aveline's Blog</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<div class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/">
+            <i class="menu-item-icon icon-home"></i> <br />
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            <i class="menu-item-icon icon-archives"></i> <br />
+            歸檔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            <i class="menu-item-icon icon-tags"></i> <br />
+            標籤
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+<form class="site-search-form">
+  <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+</form>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'h7fLV84amzbZPuPcVWP6','2.0.0');
+</script>
+
+<div class="site-search-toggle"></div>
+    </div>
+  
+</div>
+
+
+      </div>
+    </div>
+
+    <div id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+  <div id="posts" class="posts-expand">
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/">
+                解决 IIS 上无法正常下载 ini 文件的问题
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2012-10-05
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="jie-jue-iis-shang-wu-fa-zheng-chang-xia-zai-ini-wen-jian-de-wen-ti/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>解决方法很简单:</p>
+<p>1. 打开 <strong>Internet 信息服务(IIS) 管理器</strong></p>
+<p>2. 右击 <strong>网站</strong> ，点击 <strong>属性</strong></p>
+<p>3. 切换到 <strong>HTTP 头</strong> 选项卡</p>
+<p>4. 点击 <strong>MIME 类型</strong> 按钮</p>
+<p>5. 点击 <strong>新建</strong>，</p>
+<p>扩展名为 <strong>.ini</strong></p>
+<p>MIME类型为 <strong>application/octet-stream</strong></p>
+<p>6. 一路确定&#8230;搞定</p>
+<p>IIS 下面文件打不开大多数情况下无怪乎以下两种情况：</p>
+<ol>
+<li>MINE 类型设置不正确</li>
+<li>文件权限设置不正确</li>
+</ol>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/mongodb-xian-shang-qian-yi-jiao-cheng/">
+                MongoDB 线上迁移教程
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2012-08-24
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/mongodb-xian-shang-qian-yi-jiao-cheng/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="mongodb-xian-shang-qian-yi-jiao-cheng/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <h2 id="0-_迁移环境">0. 迁移环境</h2><p><strong>Host A</strong> IP: 192.168.108.125</p>
+<p><strong>Host B</strong> IP: 192.168.108.124</p>
+<p>下文所用 MongoDB 版本均为 <strong>2.0.7</strong> ，操作系统为 <strong>Debian 6</strong>。</p>
+<h2 id="1-_热身">1. 热身</h2><p>打开两台机器的防火墙 <strong>没开防火墙的同学这部分可以不用看了</strong></p>
+<p>在 <strong>Host A</strong> (数据源) 上执行如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT <span class="operator">-s</span> HostA/<span class="number">32</span> -p tcp -m tcp --dport <span class="number">27017</span> -j ACCEPT</span><br></pre></td></tr></table></figure>
+<p>在 <strong>Host B</strong> (迁移目标) 上执行如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT <span class="operator">-s</span> HostB/<span class="number">32</span> -p tcp -m tcp --dport <span class="number">27017</span> -j ACCEPT</span><br></pre></td></tr></table></figure>
+<p>为了安全，我的 MongoDB 是只绑定在本地环回接口上的，打开 <code>/etc/mongodb.conf</code>，注释掉 <code>bind_ip = 127.0.0.1</code>这行。</p>
+<p>同时，在文件末尾加上<code>replSet = rs0</code>以打开 Replication 功能。</p>
+<figure class="highlight bash"><figcaption><span>/etc/mongodb.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dbpath = /db/mongo</span><br><span class="line">logpath = /<span class="built_in">log</span>/mongo/mongo.log</span><br><span class="line"><span class="comment">#bind_ip = 127.0.0.1</span></span><br><span class="line">noauth = <span class="literal">true</span></span><br><span class="line">verbose = <span class="literal">true</span></span><br><span class="line">journal = <span class="literal">true</span></span><br><span class="line">noprealloc = <span class="literal">true</span></span><br><span class="line">smallfiles = <span class="literal">true</span></span><br><span class="line">replSet = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>现在，重启 Host A 和 Host B 的 MongoDB。</p>
+<h2 id="2-_配置_Replication">2. 配置 Replication</h2><p>在 <strong>Host A</strong> 上运行 <code>mongo</code>，输入以下命令</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">config = &#123;_id: <span class="string">'rs0'</span>, members: [</span><br><span class="line">    &#123;_id: <span class="number">0</span>, host: <span class="string">'192.168.108.125:27017'</span>&#125;,</span><br><span class="line">    &#123;_id: <span class="number">1</span>, host: <span class="string">'192.168.108.124:27017'</span>&#125;</span><br><span class="line">]&#125;</span><br><span class="line">rs.initiate(config)</span><br></pre></td></tr></table></figure>
+<p>稍等一会儿，系统会有下列提示</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">rs.initiate(config)</span><br><span class="line">&#123;</span><br><span class="line">    &amp;quot;info&amp;quot; : &amp;quot;Config now saved locally.  Should come online <span class="keyword">in</span> about a minute.&amp;quot;,</span><br><span class="line">    &amp;quot;ok&amp;quot; : <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">PRIMARY&amp;gt;</span><br></pre></td></tr></table></figure>
+<p>打开 <strong>Host B</strong>的 <code>mongo</code>，我们可以看到有如下的提示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MongoDB shell version: <span class="number">2.0</span>.<span class="number">7</span></span><br><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line">&amp;gt;</span><br><span class="line">RECOVERING&amp;gt;</span><br></pre></td></tr></table></figure>
+<p>输入 <code>rs.status()</code> 查看恢复状态</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">RECOVERING&amp;gt; rs.status()</span><br><span class="line">&#123;</span><br><span class="line">    &amp;quot;set&amp;quot; : &amp;quot;rs0&amp;quot;,</span><br><span class="line">    &amp;quot;date&amp;quot; : ISODate(&amp;quot;<span class="number">2012</span>-<span class="number">08</span>-<span class="number">24</span>T16:<span class="number">03</span>:<span class="number">05</span>Z&amp;quot;),</span><br><span class="line">    &amp;quot;myState&amp;quot; : <span class="number">3</span>,</span><br><span class="line">    &amp;quot;syncingTo&amp;quot; : &amp;quot;<span class="number">192.168</span>.108.125:<span class="number">27017</span>&amp;quot;,</span><br><span class="line">    &amp;quot;members&amp;quot; : [</span><br><span class="line">        &#123;</span><br><span class="line">            &amp;quot;_id&amp;quot; : <span class="number">0</span>,</span><br><span class="line">            &amp;quot;name&amp;quot; : &amp;quot;<span class="number">192.168</span>.108.125:<span class="number">27017</span>&amp;quot;,</span><br><span class="line">            &amp;quot;health&amp;quot; : <span class="number">1</span>,</span><br><span class="line">            &amp;quot;state&amp;quot; : <span class="number">1</span>,</span><br><span class="line">            &amp;quot;stateStr&amp;quot; : &amp;quot;PRIMARY&amp;quot;,</span><br><span class="line">            &amp;quot;uptime&amp;quot; : <span class="number">220</span>,</span><br><span class="line">            &amp;quot;optime&amp;quot; : &#123;</span><br><span class="line">                &amp;quot;t&amp;quot; : <span class="number">1345824182000</span>,</span><br><span class="line">                &amp;quot;i&amp;quot; : <span class="number">6</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &amp;quot;optimeDate&amp;quot; : ISODate(&amp;quot;<span class="number">2012</span>-<span class="number">08</span>-<span class="number">24</span>T16:<span class="number">03</span>:<span class="number">02</span>Z&amp;quot;),</span><br><span class="line">            &amp;quot;lastHeartbeat&amp;quot; : ISODate(&amp;quot;<span class="number">2012</span>-<span class="number">08</span>-<span class="number">24</span>T16:<span class="number">03</span>:<span class="number">05</span>Z&amp;quot;),</span><br><span class="line">            &amp;quot;pingMs&amp;quot; : <span class="number">29</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &amp;quot;_id&amp;quot; : <span class="number">1</span>,</span><br><span class="line">            &amp;quot;name&amp;quot; : &amp;quot;<span class="number">192.168</span>.108.124:<span class="number">27017</span>&amp;quot;,</span><br><span class="line">            &amp;quot;health&amp;quot; : <span class="number">1</span>,</span><br><span class="line">            &amp;quot;state&amp;quot; : <span class="number">3</span>,</span><br><span class="line">            &amp;quot;stateStr&amp;quot; : &amp;quot;RECOVERING&amp;quot;,</span><br><span class="line">            &amp;quot;optime&amp;quot; : &#123;</span><br><span class="line">                &amp;quot;t&amp;quot; : <span class="number">0</span>,</span><br><span class="line">                &amp;quot;i&amp;quot; : <span class="number">0</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &amp;quot;optimeDate&amp;quot; : ISODate(&amp;quot;<span class="number">1970</span>-<span class="number">01</span>-<span class="number">01</span>T00:<span class="number">00</span>:<span class="number">00</span>Z&amp;quot;),</span><br><span class="line">            &amp;quot;self&amp;quot; : <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &amp;quot;ok&amp;quot; : <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>依照数据量的大小可能需要传输一阵子，利用这个空闲我们把 <strong>Host A</strong> 上的网络服务迁移到 <strong>Host B</strong> 上</p>
+<h2 id="3-_迁移关联服务">3. 迁移关联服务</h2><p>在 MongoDB 中，从 Slave 上执行查询需要在查询前先执行 <code>db.getMongo().setSlaveOk()</code>，否则会出现这样的提示：</p>
+<pre class="brush: bash; title: ; notranslate">RECOVERING&gt; db.tasks.find();
+error: { &quot;$err&quot; : &quot;not master and slaveok=false&quot;, &quot;code&quot; : 13435 }
+</pre>
+
+<p>如果你的程序木有注意这一点，那么…赶紧给我改代码去！！！快去！！！</p>
+<p>现在我们的 Web 应用程序已经复制到了 <strong>Host B</strong> 的硬盘里，并已经可以提供服务。</p>
+<p>打开 <strong>Host A</strong> 的 <strong>nginx</strong> 的配置文件，在这里是 <code>/etc/nginx/nginx.conf</code>。</p>
+<p>将原有 <code>server</code> 部分均删除并替换为如下内容：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">upstream</span> hostb &#123;</span><br><span class="line">    <span class="title">server</span> <span class="number">192.168.108.124:80</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">    <span class="title">proxy_pass</span>          <span class="url">http://localhost:8000</span>;</span><br><span class="line">    <span class="title">proxy_set_header</span>    X-Real-IP   <span class="variable">$remote_addr</span>;</span><br><span class="line">    <span class="title">proxy_set_header</span>    Host        <span class="variable">$http_host</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行命令 <code>/usr/local/nginx/sbin/nginx -s reload</code> 重新载入 <strong>nginx</strong> 配置。</p>
+<h2 id="4-_移除_Replication">4. 移除 Replication</h2><p>在 MongoDB 完成复制后， <strong>Host B</strong> 的提示符会变成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">MongoDB shell version: <span class="number">2.0</span>.<span class="number">7</span></span><br><span class="line">connecting to: <span class="built_in">test</span></span><br><span class="line">&amp;gt;</span><br><span class="line">SECONDARY&amp;gt;</span><br></pre></td></tr></table></figure>
+<p>这时候我们将 <strong>Host B</strong> 变更为 <strong>Primary</strong>， 在 <strong>Host A</strong> 上执行如下命令：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cfg = rs.conf()</span><br><span class="line">cfg.members[<span class="number">0</span>].priority = <span class="number">10</span></span><br><span class="line">cfg.members[<span class="number">1</span>].priority = <span class="number">20</span></span><br><span class="line">rs.reconfig(cfg)</span><br></pre></td></tr></table></figure>
+<p>稍等一会儿， <strong>Host A</strong> 就会变更为 <strong>Secondary</strong>：</p>
+<figure class="highlight"><figcaption><span>rs.reconfig(cfg)</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sat Aug 25 00:18:49 DBClientCursor::init call() failed&#10;Sat Aug 25 00:18:49 query failed : admin.$cmd &#123; replSetReconfig: &#123; _id: &#38;quot;rs0&#38;quot;, version: 2, members: [ &#123; _id: 0, host: &#38;quot;192.168.108.125:27017&#38;quot;, priority: 10.0 &#125;, &#123; _id: 1, host: &#38;quot;192.168.108.124:27017&#38;quot;, priority: 20.0 &#125; ] &#125; &#125; to: 127.0.0.1&#10;Sat Aug 25 00:18:49 trying reconnect to 127.0.0.1&#10;Sat Aug 25 00:18:49 reconnect 127.0.0.1 ok&#10;reconnected to server after rs command (which is normal)&#10;PRIMARY&#38;gt;&#10;Sat Aug 25 00:18:59 Socket recv() errno:104 Connection reset by peer 127.0.0.1:27017&#10;Sat Aug 25 00:18:59 SocketException: remote: 127.0.0.1:27017 error: 9001 socket exception [1] server [127.0.0.1:27017]&#10;Sat Aug 25 00:18:59 DBClientCursor::init call() failed&#10;&#38;gt;&#10;Sat Aug 25 00:19:00 trying reconnect to 127.0.0.1&#10;Sat Aug 25 00:19:00 reconnect 127.0.0.1 ok&#10;SECONDARY&#38;gt;</span><br></pre></td></tr></table></figure>
+<p>现在我们可以关掉 <strong>Host A</strong>的 <strong>MongoDB</strong>。</p>
+<p>打开 <strong>Host B</strong> 的 <code>/etc/mongodb.conf</code> ，去除 <strong>Host B</strong> 设置中的 <code>replSet = rs0</code> ：</p>
+<figure class="highlight bash"><figcaption><span>/etc/mongodb.conf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dbpath = /db/mongo</span><br><span class="line">logpath = /<span class="built_in">log</span>/mongo/mongo.log</span><br><span class="line"><span class="built_in">bind</span>_ip = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line">noauth = <span class="literal">true</span></span><br><span class="line">verbose = <span class="literal">true</span></span><br><span class="line">journal = <span class="literal">true</span></span><br><span class="line">noprealloc = <span class="literal">true</span></span><br><span class="line">smallfiles = <span class="literal">true</span></span><br><span class="line"><span class="comment">#replSet = 0</span></span><br></pre></td></tr></table></figure>
+<p>重启 <strong>MongoDB</strong>，至此，本次迁移已经完成，等待 <strong>DNS解析生效</strong> 后，就可以把 <strong>Host A</strong> 下架了。</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+      
+
+  <div class="post post-type-normal ">
+    <div class="post-header">
+
+      
+      
+        <h1 class="post-title">
+          
+          
+            
+              <a class="post-title-link" href="/gei-openvz-tian-jia-ssh-kong-zhi-tai/">
+                给 OpenVZ 添加 SSH 控制台
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          發表於 2012-07-07
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/gei-openvz-tian-jia-ssh-kong-zhi-tai/#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="gei-openvz-tian-jia-ssh-kong-zhi-tai/"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <p>最近在研究虚拟化。。。嗯当然 OpenVZ 这怎么说呢，不算是虚拟化吧。</p>
+<p>因为我们有些奇怪的需求，SolusVM 什么的不符合要求，所以在自己写。</p>
+<p>嗯。然后呢，（啊喂主题是啥？！</p>
+<p>嗯。。。有的时候呢用户一不小心把 SSH 搞残了或者把网络搞残了，这个时候！</p>
+<p>就需要登录 OpenVZ 的控制台了，一个人用 OpenVZ 的时候很简单，直接 <em>vzctl enter VEID</em> 就可以了。</p>
+<p>但！多人环境下如何操作捏。。。</p>
+<p>首先我们为需要console的用户添加一个账户并设置密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd console-vz1000 -p wulala <span class="operator">-s</span> /usr/<span class="built_in">local</span>/sbin/vzconsole</span><br></pre></td></tr></table></figure>
+<p>然后创建vzconsole这个文件</p>
+<figure class="highlight bash"><figcaption><span>/usr/local/sbin/vzconsole</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line">sudo vzctl enter <span class="number">1000</span></span><br></pre></td></tr></table></figure>
+<p>记得给这个文件加上执行权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/<span class="built_in">local</span>/sbin/vzconsole</span><br></pre></td></tr></table></figure>
+<p>在sudoer里添加相关内容。。直接在最后面新建一行</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console-vz1000 ALL = <span class="string">NOPASSWD :</span> <span class="regexp">/usr/</span>local<span class="regexp">/sbin/</span>vzconsole</span><br></pre></td></tr></table></figure>
+<p>Done..</p>
+
+        
+      
+    </div>
+
+    <div class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </div>
+  </div>
+
+
+    
+  </div>
+
+  
+  <div class="pagination">
+    <a class="extend prev" rel="prev" href="/page/10/">&laquo;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span>
+  </div>
+
+
+        </div>
+
+        
+      </div>
+
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      <div class="site-overview">
+        <div class="site-author motion-element">
+          <img class="site-author-image" src="https://en.gravatar.com/userimage/15516490/ccf4829ea2de640a573974d1e17698ee.png?size=360" alt="Aveline Swan" />
+          <p class="site-author-name">Aveline Swan</p>
+        </div>
+        <p class="site-description motion-element"></p>
+        <div class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">33</span>
+              <span class="site-state-item-name">文章</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            
+              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-name">分類</span>
+              
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">標籤</span>
+              </a>
+          </div>
+
+        </div>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml">
+              <i class="menu-item-icon icon-feed"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+              <a href="https://github.com/ym" target="_blank">GitHub</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://twitter.com/Aveline_Swan" target="_blank">Twitter</a>
+            </span>
+            
+              <span class="links-of-author-item">
+              <a href="http://www.douban.com/people/avelineswan/" target="_blank">DouBan</a>
+            </span>
+            
+          
+        </div>
+
+        
+        
+
+      </div>
+
+      
+
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; &nbsp;  2005 - 
+  2016
+  <span class="with-love">
+    <i class="icon-heart"></i>
+  </span>
+  <span class="author">Aveline Swan</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+</div>
+
+<div class="theme-info">
+  主題 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </div>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.3"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.3"></script>
+  
+
+  <script type="text/javascript" src="/js/motion_fallback.js?v=0.4.3" id="motion.fallback"></script>
+
+
+
+  <script type="text/javascript" src="/js/search-toggle.js"></script>
+
+  
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
+  
+
+  
+  
+  
+
+  
+
+    
+      
+    
+
+    <script type="text/javascript">
+      var disqus_shortname = 'av2b';
+      var disqus_identifier = 'page/11/index.html';
+      var disqus_title = '';
+      var disqus_url = '';
+
+      (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript" src="/js/analytics_google-analytics.js?v=0.4.3"></script>
+
+
+</body>
+</html>
